@@ -1,37 +1,46 @@
-let linkInterstitialId = "";
-let linkRewardedId = "";
+var isAdBlocked = false;
+var linkInterstitialId = "";
+var linkRewardedId = "";
 
 window.addEventListener("load", () => {
     let platform = window.getWortalPlatform();
     console.log('[Wortal] Platform: ' + platform);
     window.initWortal(function () {
         console.log("[Wortal] Initializing..");
-        if (platform === 'link' || platform === 'viber') {
+        if (platform === 'link') {
             if (window.wortalGame) {
-                wortalGame = window.wortalGame;
-                wortalGame.initializeAsync().then(() => {
-                    document.getElementById("loading-cover").style.display = "none";
-                    wortalGame.setLoadingProgress(100);
-                    wortalGame.startGameAsync();
+                window.wortalGame.initializeAsync().then(() => {
+                    _removeLoadingCover();
+                    window.wortalGame.setLoadingProgress(100);
+                    window.wortalGame.startGameAsync();
                     _getLinkAdUnitIds();
                 });
-            } else {
-                document.getElementById("loading-cover").style.display = "none";
-                console.error("[Wortal] Failed to find wortalGame.");
+            }
+        } else if (platform === 'viber') {
+            if (window.wortalGame) {
+                window.wortalGame.initializeAsync().then(() => {
+                    _removeLoadingCover();
+                    window.wortalGame.setLoadingProgress(100);
+                    window.wortalGame.startGameAsync();
+                });
             }
         } else {
             window.triggerWortalAd("preroll", "", "Preroll", {
                 adBreakDone: function () {
                     console.log("[Wortal] AdBreakDone");
-                    document.getElementById("loading-cover").hidden = true;
+                    _removeLoadingCover();
                 },
                 noShow: function () {
                     console.log("[Wortal] NoShow");
-                    document.getElementById("loading-cover").hidden = true;
+                    _removeLoadingCover();
                 }
             });
         }
         console.log("[Wortal] Initialized");
+    }, function () {
+        console.log("[Wortal] Ad blocker detected.");
+        _removeLoadingCover();
+        isAdBlocked = true;
     });
 });
 
@@ -41,4 +50,8 @@ function _getLinkAdUnitIds() {
         linkInterstitialId = adUnits[0].id;
         linkRewardedId = adUnits[1].id;
     });
+}
+
+function _removeLoadingCover() {
+    document.getElementById("loading-cover").style.display = "none";
 }
