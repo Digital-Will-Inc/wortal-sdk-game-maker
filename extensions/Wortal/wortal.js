@@ -6,7 +6,7 @@
  * Public API is denoted by under_bar naming convention to match extension functions declared in Wortal.yy
  * while private methods use _camelCase and should not be called by the game.
  */
-const version = '1.0.0';
+const version = '1.0.1';
 
 const gameName = document.title;
 const platform = window.getWortalPlatform();
@@ -22,7 +22,7 @@ _getIntlData()
     .catch(() => _logGameStart("Nulltherlands"));
 
 window.addEventListener('visibilitychange', () => {
-    if (document.visibilityState == "hidden") {
+    if (document.visibilityState === "hidden") {
         _logGameEnd();
     }
 });
@@ -34,6 +34,11 @@ window.addEventListener('visibilitychange', () => {
  * @see https://developers.google.com/ad-placement/docs/placement-types for more info on placement types.
  */
 function show_interstitial(placement, description) {
+    if (isAdBlocked) {
+        _wortalCallback('AFTER_AD');
+        return;
+    }
+
     window.triggerWortalAd(placement, linkInterstitialId, description, {
         beforeAd: () => {
             console.log("[Wortal] BeforeAd");
@@ -65,6 +70,12 @@ function show_interstitial(placement, description) {
  * @param description Description of the ad placement. Ex: 'ReviveAndContinue'
  */
 function show_rewarded(description) {
+    if (isAdBlocked) {
+        _wortalCallback('AFTER_AD');
+        _wortalCallback('REWARD_SKIP');
+        return;
+    }
+
     window.triggerWortalAd('reward', linkRewardedId, description, {
         beforeAd: () => {
             console.log("[Wortal] BeforeAd");

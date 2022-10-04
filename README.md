@@ -10,7 +10,7 @@
 5. Create a .zip archive of the game with the index.html at the root
 6. Upload build to the Wortal dashboard
 
-## Required changes to the game build
+### Required changes to the game build
 There are some changes that need to be made to the game build before the Wortal SDK integration is complete.
 
 1. Extract the .zip archive that resulted from the GameMaker build
@@ -66,10 +66,10 @@ if (ID != undefined) {
 		switch(async_load[? "event"])
 		{
 			case "BEFORE_AD":
-                      // Pause game and audio here.
+            // Pause game and audio here.
 			break;
 			case "AFTER_AD":
-                      // Resume game and audio here.
+            // Resume game and audio here.
 			break;
 			case "REWARD_SKIP":
 			// Do not reward the player - ad was skipped.
