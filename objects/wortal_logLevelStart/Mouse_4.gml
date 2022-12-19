@@ -1,1 +1,0 @@
-log_level_start("Test");

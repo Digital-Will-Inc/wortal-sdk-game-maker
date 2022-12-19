@@ -1,0 +1,1 @@
+wortal_ads_show_rewarded("BonusCoins");
