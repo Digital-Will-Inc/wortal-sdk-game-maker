@@ -7,6 +7,7 @@
     {"id":{"name":"overview_player","path":"objects/overview_player/overview_player.yy",},"order":6,},
     {"id":{"name":"Session","path":"rooms/Session/Session.yy",},"order":7,},
     {"id":{"name":"Ads","path":"rooms/Ads/Ads.yy",},"order":1,},
+    {"id":{"name":"context_controller","path":"objects/context_controller/context_controller.yy",},"order":0,},
     {"id":{"name":"fontTest","path":"fonts/fontTest/fontTest.yy",},"order":0,},
     {"id":{"name":"overview_leaderboard","path":"objects/overview_leaderboard/overview_leaderboard.yy",},"order":5,},
     {"id":{"name":"ads_showInterstitial","path":"objects/ads_showInterstitial/ads_showInterstitial.yy",},"order":0,},
@@ -29,6 +30,8 @@
     {"id":{"name":"Leaderboard","path":"rooms/Leaderboard/Leaderboard.yy",},"order":5,},
     {"id":{"name":"Player","path":"rooms/Player/Player.yy",},"order":6,},
     {"id":{"name":"overview_session","path":"objects/overview_session/overview_session.yy",},"order":7,},
+    {"id":{"name":"context_choose","path":"objects/context_choose/context_choose.yy",},"order":1,},
+    {"id":{"name":"context_share","path":"objects/context_share/context_share.yy",},"order":2,},
     {"id":{"name":"Overview","path":"rooms/Overview/Overview.yy",},"order":0,},
   ],
   "Options": [
@@ -90,7 +93,9 @@
   "TextureGroups": [
     {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","isScaled":true,"compressFormat":"bz2","loadType":"default","directory":"","autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,},
   ],
-  "IncludedFiles": [],
+  "IncludedFiles": [
+    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"wortal_index.html","CopyToMask":32,"filePath":"datafiles",},
+  ],
   "MetaData": {
     "IDEVersion": "2022.11.1.56",
   },
