@@ -5,13 +5,13 @@ const AD_EVENTS = {
     AD_VIEWED: 'REWARD_PLAYER',
 }
 
-function show_interstitial(placement, description) {
+function wortalAds_showInterstitial(placement, description) {
     window.Wortal.ads.showInterstitial(placement, description,
         () => _adCallback(AD_EVENTS.BEFORE_AD),
         () => _adCallback(AD_EVENTS.AFTER_AD))
 }
 
-function show_rewarded(description) {
+function wortalAds_showRewarded(description) {
     window.Wortal.ads.showRewarded(description,
         () => _adCallback(AD_EVENTS.BEFORE_AD),
         () => _adCallback(AD_EVENTS.AFTER_AD),
