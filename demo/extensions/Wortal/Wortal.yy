@@ -95,7 +95,32 @@
         {"name":"wortal_iap_is_enabled","path":"extensions/Wortal/Wortal.yy",},
         {"name":"wortal_iap_get_catalog_async","path":"extensions/Wortal/Wortal.yy",},
       ],},
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","filename":"wortal-leaderboard.js","origname":"","init":"","final":"","kind":5,"uncompress":false,"functions":[],"constants":[],"ProxyFiles":[],"copyToTargets":32,"usesRunnerInterface":false,"order":[],},
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","filename":"wortal-leaderboard.js","origname":"","init":"","final":"","kind":5,"uncompress":false,"functions":[
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_leaderboard_get_leaderboard_async","externalName":"wortalLeaderboard_getLeaderboardAsync","kind":5,"help":"wortal_leaderboard_get_leaderboard_async(name);","hidden":false,"returnType":1,"argCount":0,"args":[
+            1,
+          ],"documentation":"",},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_leaderboard_send_entry_async","externalName":"wortalLeaderboard_sendEntryAsync","kind":5,"help":"wortal_leaderboard_send_entry_async(name, score, details);","hidden":false,"returnType":1,"argCount":0,"args":[
+            1,
+            2,
+            1,
+          ],"documentation":"",},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_leaderboard_get_entries_async","externalName":"wortalLeaderboard_getEntriesAsync","kind":5,"help":"wortal_leaderboard_get_entries_async(name, count, offset);","hidden":false,"returnType":1,"argCount":0,"args":[
+            1,
+            2,
+            2,
+          ],"documentation":"",},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_leaderboard_get_player_entry_async","externalName":"wortalLeaderboard_getPlayerEntryAsync","kind":5,"help":"wortal_leaderboard_get_player_entry_async(name);","hidden":false,"returnType":1,"argCount":0,"args":[
+            1,
+          ],"documentation":"",},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_leaderboard_get_entry_count_async","externalName":"wortalLeaderboard_getEntryCountAsync","kind":5,"help":"wortal_leaderboard_get_entry_count_async(name);","hidden":false,"returnType":1,"argCount":0,"args":[
+            1,
+          ],"documentation":"",},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_leaderboard_get_connected_players_entries_async","externalName":"wortalLeaderboard_getConnectedPlayersEntriesAsync","kind":5,"help":"wortal_leaderboard_get_connected_players_entries_async(name, count, offset);","hidden":false,"returnType":1,"argCount":0,"args":[
+            1,
+            2,
+            2,
+          ],"documentation":"",},
+      ],"constants":[],"ProxyFiles":[],"copyToTargets":32,"usesRunnerInterface":false,"order":[],},
     {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","filename":"wortal-player.js","origname":"","init":"","final":"","kind":5,"uncompress":false,"functions":[],"constants":[],"ProxyFiles":[],"copyToTargets":32,"usesRunnerInterface":false,"order":[],},
     {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","filename":"wortal-session.js","origname":"","init":"","final":"","kind":5,"uncompress":false,"functions":[],"constants":[],"ProxyFiles":[],"copyToTargets":32,"usesRunnerInterface":false,"order":[],},
   ],

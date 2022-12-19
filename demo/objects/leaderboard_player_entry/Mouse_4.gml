@@ -1,0 +1,1 @@
+wortal_leaderboard_get_player_entry_async("global");
