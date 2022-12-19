@@ -81,7 +81,20 @@
             1,
           ],"documentation":"",},
       ],"constants":[],"ProxyFiles":[],"copyToTargets":32,"usesRunnerInterface":false,"order":[],},
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","filename":"wortal-iap.js","origname":"","init":"","final":"","kind":5,"uncompress":false,"functions":[],"constants":[],"ProxyFiles":[],"copyToTargets":32,"usesRunnerInterface":false,"order":[],},
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","filename":"wortal-iap.js","origname":"","init":"","final":"","kind":5,"uncompress":false,"functions":[
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_iap_get_catalog_async","externalName":"wortalIAP_getCatalogAsync","kind":5,"help":"wortal_iap_get_catalog_async();","hidden":false,"returnType":1,"argCount":0,"args":[],"documentation":"",},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_iap_is_enabled","externalName":"wortalIAP_isEnabled","kind":5,"help":"wortal_iap_is_enabled();","hidden":false,"returnType":2,"argCount":0,"args":[],"documentation":"",},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_iap_get_purchases_async","externalName":"wortalIAP_getPurchasesAsync","kind":5,"help":"wortal_iap_get_purchases_async();","hidden":false,"returnType":1,"argCount":0,"args":[],"documentation":"",},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_iap_make_purchase_async","externalName":"wortalIAP_makePurchaseAsync","kind":5,"help":"wortal_iap_make_purchase_async(purchaseConfig);","hidden":false,"returnType":1,"argCount":0,"args":[
+            1,
+          ],"documentation":"",},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_iap_consume_purchase_async","externalName":"wortalIAP_consumePurchaseAsync","kind":5,"help":"wortal_iap_consume_purchase_async(purchaseToken);","hidden":false,"returnType":1,"argCount":0,"args":[
+            1,
+          ],"documentation":"",},
+      ],"constants":[],"ProxyFiles":[],"copyToTargets":32,"usesRunnerInterface":false,"order":[
+        {"name":"wortal_iap_is_enabled","path":"extensions/Wortal/Wortal.yy",},
+        {"name":"wortal_iap_get_catalog_async","path":"extensions/Wortal/Wortal.yy",},
+      ],},
     {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","filename":"wortal-leaderboard.js","origname":"","init":"","final":"","kind":5,"uncompress":false,"functions":[],"constants":[],"ProxyFiles":[],"copyToTargets":32,"usesRunnerInterface":false,"order":[],},
     {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","filename":"wortal-player.js","origname":"","init":"","final":"","kind":5,"uncompress":false,"functions":[],"constants":[],"ProxyFiles":[],"copyToTargets":32,"usesRunnerInterface":false,"order":[],},
     {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","filename":"wortal-session.js","origname":"","init":"","final":"","kind":5,"uncompress":false,"functions":[],"constants":[],"ProxyFiles":[],"copyToTargets":32,"usesRunnerInterface":false,"order":[],},

@@ -1,0 +1,1 @@
+wortal_iap_get_purchases_async();
