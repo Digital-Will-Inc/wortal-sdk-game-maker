@@ -24,7 +24,7 @@
             1,
             1,
           ],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_ads_show_rewarded","externalName":"wortalAds_showInterstitial","kind":5,"help":"wortal_ads_show_rewarded(description);","hidden":false,"returnType":1,"argCount":0,"args":[
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_ads_show_rewarded","externalName":"wortalAds_showRewarded","kind":5,"help":"wortal_ads_show_rewarded(description);","hidden":false,"returnType":1,"argCount":0,"args":[
             1,
           ],"documentation":"",},
       ],"constants":[],"ProxyFiles":[],"copyToTargets":32,"usesRunnerInterface":false,"order":[],},
@@ -137,7 +137,16 @@
           ],"documentation":"",},
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_player_get_signed_player_info_async","externalName":"wortalPlayer_getSignedPlayerInfoAsync","kind":5,"help":"wortal_player_get_signed_player_info_async();","hidden":false,"returnType":1,"argCount":0,"args":[],"documentation":"",},
       ],"constants":[],"ProxyFiles":[],"copyToTargets":32,"usesRunnerInterface":false,"order":[],},
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","filename":"wortal-session.js","origname":"","init":"","final":"","kind":5,"uncompress":false,"functions":[],"constants":[],"ProxyFiles":[],"copyToTargets":32,"usesRunnerInterface":false,"order":[],},
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","filename":"wortal-session.js","origname":"","init":"","final":"","kind":5,"uncompress":false,"functions":[
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_session_get_entry_point_data","externalName":"wortalSession_getEntryPointData","kind":5,"help":"wortal_session_get_entry_point_data();","hidden":false,"returnType":1,"argCount":0,"args":[],"documentation":"",},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_session_get_entry_point_async","externalName":"wortalSession_getEntryPointAsync","kind":5,"help":"wortal_session_get_entry_point_async();","hidden":false,"returnType":1,"argCount":0,"args":[],"documentation":"",},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_session_set_session_data","externalName":"wortalSession_setSessionData","kind":5,"help":"wortal_session_set_session_data(data);","hidden":false,"returnType":1,"argCount":0,"args":[
+            1,
+          ],"documentation":"",},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_session_get_locale","externalName":"wortalSession_getLocale","kind":5,"help":"wortal_session_get_locale();","hidden":false,"returnType":1,"argCount":0,"args":[],"documentation":"",},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_session_get_traffic_source","externalName":"wortalSession_getTrafficSource","kind":5,"help":"wortal_session_get_traffic_source();","hidden":false,"returnType":1,"argCount":0,"args":[],"documentation":"",},
+      ],"constants":[],"ProxyFiles":[],"copyToTargets":32,"usesRunnerInterface":false,"order":[],},
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","filename":"wortal.js","origname":"","init":"","final":"","kind":5,"uncompress":false,"functions":[],"constants":[],"ProxyFiles":[],"copyToTargets":32,"usesRunnerInterface":false,"order":[],},
   ],
   "classname": "",
   "tvosclassname": null,
