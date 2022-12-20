@@ -1,0 +1,1 @@
+wortal_iap_get_catalog_async();

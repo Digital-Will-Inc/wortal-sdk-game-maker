@@ -1,0 +1,1 @@
+wortal_iap_consume_purchase_async(global.purchaseToken);
