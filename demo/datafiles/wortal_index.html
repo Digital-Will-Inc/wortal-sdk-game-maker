@@ -85,9 +85,11 @@
 <script type="text/javascript" src="html5game/wortal-demo.js?TOQZB=1030758890"></script>
 <script>window.onload = GameMaker_Init;</script>
 <script>
-    if (window.Wortal) {
-        window.Wortal.setLoadingProgress(100);
-    }
+    setTimeout(() => {
+        if (window.Wortal) {
+            window.Wortal.setLoadingProgress(100);
+        }
+    }, 1000);
 </script>
 </body>
 </html>
