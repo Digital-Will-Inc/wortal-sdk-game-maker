@@ -1,0 +1,1 @@
+wortal_player_get_signed_player_info_async();

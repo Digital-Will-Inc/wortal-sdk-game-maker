@@ -1,0 +1,1 @@
+global.player_log += wortal_player_get_name();
