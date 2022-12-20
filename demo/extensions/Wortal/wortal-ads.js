@@ -1,27 +1,13 @@
-const AD_EVENTS = {
-    BEFORE_AD: 'BEFORE_AD',
-    AFTER_AD: 'AFTER_AD',
-    AD_DISMISSED: 'REWARD_SKIP',
-    AD_VIEWED: 'REWARD_PLAYER',
-}
-
 function wortalAds_showInterstitial(placement, description) {
     window.Wortal.ads.showInterstitial(placement, description,
-        () => _adCallback(AD_EVENTS.BEFORE_AD),
-        () => _adCallback(AD_EVENTS.AFTER_AD))
+        () => _wortalCallback(WORTAL_EVENTS.ADS_BEFORE_AD_CALLBACK),
+        () => _wortalCallback(WORTAL_EVENTS.ADS_AFTER_AD_CALLBACK))
 }
 
 function wortalAds_showRewarded(description) {
     window.Wortal.ads.showRewarded(description,
-        () => _adCallback(AD_EVENTS.BEFORE_AD),
-        () => _adCallback(AD_EVENTS.AFTER_AD),
-        () => _adCallback(AD_EVENTS.AD_DISMISSED),
-        () => _adCallback(AD_EVENTS.AD_VIEWED))
-}
-
-function _adCallback(event) {
-    var map = {};
-    map["id"] = "wortal_ad_callback";
-    map["event"] = event;
-    GMS_API.send_async_event_social(map);
+        () => _wortalCallback(WORTAL_EVENTS.ADS_BEFORE_AD_CALLBACK),
+        () => _wortalCallback(WORTAL_EVENTS.ADS_AFTER_AD_CALLBACK),
+        () => _wortalCallback(WORTAL_EVENTS.ADS_AD_DISMISSED_CALLBACK),
+        () => _wortalCallback(WORTAL_EVENTS.ADS_AD_VIEWED_CALLBACK))
 }

@@ -1,8 +1,7 @@
 // First we check the ID of the social event.
 var ID = async_load[? "id"];
 if (ID != undefined) {
-	// If the ID is for context callbacks then we'll handle it here.
-	if (ID == "wortal_context_callback")
+	if (ID == "wortal_callback")
 	{
 		global.context_log += "\nEvent Received : " + string(async_load[? "event"]);
 		
@@ -26,20 +25,20 @@ if (ID != undefined) {
 		
 		switch(async_load[? "event"]) 
 		{
-			case "CHOOSE_CALLBACK":
+			case "CONTEXT_CHOOSE_CALLBACK":
 			// Void callback.
 			break;
-			case "CREATE_CALLBACK":
+			case "CONTEXT_CREATE_CALLBACK":
 			// Void callback.
 			break;
-			case "SWITCH_CALLBACK":
+			case "CONTEXT_SWITCH_CALLBACK":
 			// Void callback.
 			break;
-			case "SHARE_CALLBACK":
+			case "CONTEXT_SHARE_CALLBACK":
 			// Payload contains (number) shareResult.
 			global.context_log += "\nShare Result: " + string(payload);
 			break;
-			case "UPDATE_CALLBACK":
+			case "CONTEXT_UPDATE_CALLBACK":
 			// Void callback.
 			break;
 		}

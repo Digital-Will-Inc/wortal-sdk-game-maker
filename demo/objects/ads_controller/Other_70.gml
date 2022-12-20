@@ -1,20 +1,21 @@
 var ID = async_load[? "id"];
 if (ID != undefined) {
-	if (ID == "wortal_ad_callback")
+	if (ID == "wortal_callback")
 	{
+		// Ad callbacks will only contain the event property.
 		global.ad_log += "\nEvent Received : " + string(async_load[? "event"]);
 		switch(async_load[? "event"]) 
 		{
-			case "BEFORE_AD":
+			case "ADS_BEFORE_AD_CALLBACK":
 			// Pause game and audio here.
 			break;
-			case "AFTER_AD":
+			case "ADS_AFTER_AD_CALLBACK":
 			// Resume game and audio here.
 			break;
-			case "REWARD_SKIP":
+			case "ADS_AD_DISMISSED_CALLBACK":
 			// Do not reward the player - ad was skipped.
 			break;
-			case "REWARD_PLAYER":
+			case "ADS_AD_VIEWED_CALLBACK":
 			// Reward player for watching the ad.
 			break;
 		}
