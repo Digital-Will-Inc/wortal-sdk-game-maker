@@ -1,4 +1,5 @@
 const WORTAL_EVENTS = {
+    ON_PAUSE_CALLBACK: 'ON_PAUSE_CALLBACK',
     ADS_BEFORE_AD_CALLBACK: 'ADS_BEFORE_AD_CALLBACK',
     ADS_AFTER_AD_CALLBACK: 'ADS_AFTER_AD_CALLBACK',
     ADS_AD_DISMISSED_CALLBACK: 'ADS_AD_DISMISSED_CALLBACK',
@@ -33,4 +34,8 @@ function _wortalCallback(event, success, payload, error) {
     map["payload"] = payload;
     map["error"] = error;
     GMS_API.send_async_event_social(map);
+}
+
+if (window.Wortal) {
+    window.Wortal.onPause(() => _wortalCallback(WORTAL_EVENTS.ON_PAUSE_CALLBACK));
 }
