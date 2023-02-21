@@ -2,59 +2,58 @@
   "resourceType": "GMExtension",
   "resourceVersion": "1.2",
   "name": "Wortal",
-  "optionsFile": "options.json",
-  "options": [],
-  "exportToGame": true,
-  "supportedTargets": -1,
-  "extensionVersion": "2.0.0",
-  "packageId": "",
-  "productId": "",
-  "author": "Digital Will",
-  "date": "2022-09-27T09:56:42.1953214+09:00",
-  "license": "",
-  "description": "Wortal SDK for GameMaker",
-  "helpfile": "",
-  "iosProps": false,
-  "tvosProps": false,
+  "androidactivityinject": "",
+  "androidclassname": "",
+  "androidcodeinjection": "",
+  "androidinject": "",
+  "androidmanifestinject": "",
+  "androidPermissions": [],
   "androidProps": false,
-  "installdir": "",
+  "androidsourcedir": "",
+  "author": "Digital Will",
+  "classname": "",
+  "copyToTargets": 32,
+  "date": "2022-09-27T09:56:42.1953214+09:00",
+  "description": "Wortal SDK for GameMaker",
+  "exportToGame": true,
+  "extensionVersion": "2.0.0",
   "files": [
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","filename":"wortal-ads.js","origname":"","init":"","final":"","kind":5,"uncompress":false,"functions":[
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_ads_show_interstitial","externalName":"wortalAds_showInterstitial","kind":5,"help":"wortal_ads_show_interstitial(placementType, description);","hidden":false,"returnType":1,"argCount":0,"args":[
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":32,"filename":"wortal-ads.js","final":"","functions":[
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_ads_show_interstitial","argCount":0,"args":[
             1,
             1,
-          ],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_ads_show_rewarded","externalName":"wortalAds_showRewarded","kind":5,"help":"wortal_ads_show_rewarded(description);","hidden":false,"returnType":1,"argCount":0,"args":[
+          ],"documentation":"","externalName":"wortalAds_showInterstitial","help":"wortal_ads_show_interstitial(placementType, description);","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_ads_show_rewarded","argCount":0,"args":[
             1,
-          ],"documentation":"",},
-      ],"constants":[],"ProxyFiles":[],"copyToTargets":32,"usesRunnerInterface":false,"order":[],},
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","filename":"wortal-analytics.js","origname":"","init":"","final":"","kind":5,"uncompress":false,"functions":[
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_analytics_log_level_start","externalName":"wortalAnalytics_logLevelStart","kind":5,"help":"wortal_analytics_log_level_start(level);","hidden":false,"returnType":1,"argCount":0,"args":[
+          ],"documentation":"","externalName":"wortalAds_showRewarded","help":"wortal_ads_show_rewarded(description);","hidden":false,"kind":5,"returnType":1,},
+      ],"init":"","kind":5,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":32,"filename":"wortal-analytics.js","final":"","functions":[
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_analytics_log_level_start","argCount":0,"args":[
             1,
-          ],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_analytics_log_level_end","externalName":"wortalAnalytics_logLevelEnd","kind":5,"help":"wortal_analytics_log_level_end(level, score, wasCompleted);","hidden":false,"returnType":1,"argCount":0,"args":[
+          ],"documentation":"","externalName":"wortalAnalytics_logLevelStart","help":"wortal_analytics_log_level_start(level);","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_analytics_log_level_end","argCount":0,"args":[
             1,
             1,
             2,
-          ],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_analytics_log_level_up","externalName":"wortalAnalytics_logLevelUp","kind":5,"help":"wortal_analytics_log_level_up(level);","hidden":false,"returnType":1,"argCount":0,"args":[
+          ],"documentation":"","externalName":"wortalAnalytics_logLevelEnd","help":"wortal_analytics_log_level_end(level, score, wasCompleted);","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_analytics_log_level_up","argCount":0,"args":[
             1,
-          ],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_analytics_log_score","externalName":"wortalAnalytics_logScore","kind":5,"help":"wortal_analytics_log_score(score);","hidden":false,"returnType":1,"argCount":0,"args":[
+          ],"documentation":"","externalName":"wortalAnalytics_logLevelUp","help":"wortal_analytics_log_level_up(level);","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_analytics_log_score","argCount":0,"args":[
             1,
-          ],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_analytics_log_game_choice","externalName":"wortalAnalytics_logGameChoice","kind":5,"help":"wortal_analytics_log_game_choice(decision, choice);","hidden":false,"returnType":1,"argCount":0,"args":[
+          ],"documentation":"","externalName":"wortalAnalytics_logScore","help":"wortal_analytics_log_score(score);","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_analytics_log_game_choice","argCount":0,"args":[
             1,
             1,
-          ],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_analytics_log_tutorial_start","externalName":"wortalAnalytics_logTutorialStart","kind":5,"help":"wortal_analytics_log_tutorial_start(tutorial);","hidden":false,"returnType":1,"argCount":0,"args":[
+          ],"documentation":"","externalName":"wortalAnalytics_logGameChoice","help":"wortal_analytics_log_game_choice(decision, choice);","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_analytics_log_tutorial_start","argCount":0,"args":[
             1,
-          ],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_analytics_log_tutorial_end","externalName":"wortalAnalytics_logTutorialEnd","kind":5,"help":"wortal_analytics_log_tutorial_end(tutorial, wasCompleted);","hidden":false,"returnType":1,"argCount":0,"args":[
+          ],"documentation":"","externalName":"wortalAnalytics_logTutorialStart","help":"wortal_analytics_log_tutorial_start(tutorial);","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_analytics_log_tutorial_end","argCount":0,"args":[
             1,
             2,
-          ],"documentation":"",},
-      ],"constants":[],"ProxyFiles":[],"copyToTargets":32,"usesRunnerInterface":false,"order":[
+          ],"documentation":"","externalName":"wortalAnalytics_logTutorialEnd","help":"wortal_analytics_log_tutorial_end(tutorial, wasCompleted);","hidden":false,"kind":5,"returnType":1,},
+      ],"init":"","kind":5,"order":[
         {"name":"wortal_analytics_log_level_start","path":"extensions/Wortal/Wortal.yy",},
         {"name":"wortal_analytics_log_level_end","path":"extensions/Wortal/Wortal.yy",},
         {"name":"wortal_analytics_log_level_up","path":"extensions/Wortal/Wortal.yy",},
@@ -62,127 +61,128 @@
         {"name":"wortal_analytics_log_tutorial_start","path":"extensions/Wortal/Wortal.yy",},
         {"name":"wortal_analytics_log_tutorial_end","path":"extensions/Wortal/Wortal.yy",},
         {"name":"wortal_analytics_log_game_choice","path":"extensions/Wortal/Wortal.yy",},
-      ],},
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","filename":"wortal-context.js","origname":"","init":"","final":"","kind":5,"uncompress":false,"functions":[
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_context_choose_async","externalName":"wortalContext_chooseAsync","kind":5,"help":"wortal_context_choose_async(payload);","hidden":false,"returnType":1,"argCount":0,"args":[
+      ],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":32,"filename":"wortal-context.js","final":"","functions":[
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_context_choose_async","argCount":0,"args":[
             1,
-          ],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_context_get_id","externalName":"wortalContext_getId","kind":5,"help":"wortal_context_get_id();","hidden":false,"returnType":1,"argCount":0,"args":[],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_context_create_async","externalName":"wortalContext_createAsync","kind":5,"help":"wortal_context_create_async(playerId);","hidden":false,"returnType":1,"argCount":0,"args":[
+          ],"documentation":"","externalName":"wortalContext_chooseAsync","help":"wortal_context_choose_async(payload);","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_context_get_id","argCount":0,"args":[],"documentation":"","externalName":"wortalContext_getId","help":"wortal_context_get_id();","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_context_create_async","argCount":0,"args":[
             1,
-          ],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_context_switch_async","externalName":"wortalContext_switchAsync","kind":5,"help":"wortal_context_switch_async(contextId);","hidden":false,"returnType":1,"argCount":0,"args":[
+          ],"documentation":"","externalName":"wortalContext_createAsync","help":"wortal_context_create_async(playerId);","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_context_switch_async","argCount":0,"args":[
             1,
-          ],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_context_share_async","externalName":"wortalContext_shareAsync","kind":5,"help":"wortal_context_share_async(payload);","hidden":false,"returnType":1,"argCount":0,"args":[
+          ],"documentation":"","externalName":"wortalContext_switchAsync","help":"wortal_context_switch_async(contextId);","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_context_share_async","argCount":0,"args":[
             1,
-          ],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_context_update_async","externalName":"wortalContext_updateAsync","kind":5,"help":"wortal_context_update_async(payload);","hidden":false,"returnType":1,"argCount":0,"args":[
+          ],"documentation":"","externalName":"wortalContext_shareAsync","help":"wortal_context_share_async(payload);","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_context_update_async","argCount":0,"args":[
             1,
-          ],"documentation":"",},
-      ],"constants":[],"ProxyFiles":[],"copyToTargets":32,"usesRunnerInterface":false,"order":[],},
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","filename":"wortal-iap.js","origname":"","init":"","final":"","kind":5,"uncompress":false,"functions":[
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_iap_get_catalog_async","externalName":"wortalIAP_getCatalogAsync","kind":5,"help":"wortal_iap_get_catalog_async();","hidden":false,"returnType":1,"argCount":0,"args":[],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_iap_is_enabled","externalName":"wortalIAP_isEnabled","kind":5,"help":"wortal_iap_is_enabled();","hidden":false,"returnType":2,"argCount":0,"args":[],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_iap_get_purchases_async","externalName":"wortalIAP_getPurchasesAsync","kind":5,"help":"wortal_iap_get_purchases_async();","hidden":false,"returnType":1,"argCount":0,"args":[],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_iap_make_purchase_async","externalName":"wortalIAP_makePurchaseAsync","kind":5,"help":"wortal_iap_make_purchase_async(purchaseConfig);","hidden":false,"returnType":1,"argCount":0,"args":[
+          ],"documentation":"","externalName":"wortalContext_updateAsync","help":"wortal_context_update_async(payload);","hidden":false,"kind":5,"returnType":1,},
+      ],"init":"","kind":5,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":32,"filename":"wortal-iap.js","final":"","functions":[
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_iap_get_catalog_async","argCount":0,"args":[],"documentation":"","externalName":"wortalIAP_getCatalogAsync","help":"wortal_iap_get_catalog_async();","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_iap_is_enabled","argCount":0,"args":[],"documentation":"","externalName":"wortalIAP_isEnabled","help":"wortal_iap_is_enabled();","hidden":false,"kind":5,"returnType":2,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_iap_get_purchases_async","argCount":0,"args":[],"documentation":"","externalName":"wortalIAP_getPurchasesAsync","help":"wortal_iap_get_purchases_async();","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_iap_make_purchase_async","argCount":0,"args":[
             1,
-          ],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_iap_consume_purchase_async","externalName":"wortalIAP_consumePurchaseAsync","kind":5,"help":"wortal_iap_consume_purchase_async(purchaseToken);","hidden":false,"returnType":1,"argCount":0,"args":[
+          ],"documentation":"","externalName":"wortalIAP_makePurchaseAsync","help":"wortal_iap_make_purchase_async(purchaseConfig);","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_iap_consume_purchase_async","argCount":0,"args":[
             1,
-          ],"documentation":"",},
-      ],"constants":[],"ProxyFiles":[],"copyToTargets":32,"usesRunnerInterface":false,"order":[
+          ],"documentation":"","externalName":"wortalIAP_consumePurchaseAsync","help":"wortal_iap_consume_purchase_async(purchaseToken);","hidden":false,"kind":5,"returnType":1,},
+      ],"init":"","kind":5,"order":[
         {"name":"wortal_iap_is_enabled","path":"extensions/Wortal/Wortal.yy",},
         {"name":"wortal_iap_get_catalog_async","path":"extensions/Wortal/Wortal.yy",},
-      ],},
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","filename":"wortal-leaderboard.js","origname":"","init":"","final":"","kind":5,"uncompress":false,"functions":[
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_leaderboard_get_leaderboard_async","externalName":"wortalLeaderboard_getLeaderboardAsync","kind":5,"help":"wortal_leaderboard_get_leaderboard_async(name);","hidden":false,"returnType":1,"argCount":0,"args":[
+      ],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":32,"filename":"wortal-leaderboard.js","final":"","functions":[
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_leaderboard_get_leaderboard_async","argCount":0,"args":[
             1,
-          ],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_leaderboard_send_entry_async","externalName":"wortalLeaderboard_sendEntryAsync","kind":5,"help":"wortal_leaderboard_send_entry_async(name, score, details);","hidden":false,"returnType":1,"argCount":0,"args":[
-            1,
-            2,
-            1,
-          ],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_leaderboard_get_entries_async","externalName":"wortalLeaderboard_getEntriesAsync","kind":5,"help":"wortal_leaderboard_get_entries_async(name, count, offset);","hidden":false,"returnType":1,"argCount":0,"args":[
+          ],"documentation":"","externalName":"wortalLeaderboard_getLeaderboardAsync","help":"wortal_leaderboard_get_leaderboard_async(name);","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_leaderboard_send_entry_async","argCount":0,"args":[
             1,
             2,
-            2,
-          ],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_leaderboard_get_player_entry_async","externalName":"wortalLeaderboard_getPlayerEntryAsync","kind":5,"help":"wortal_leaderboard_get_player_entry_async(name);","hidden":false,"returnType":1,"argCount":0,"args":[
             1,
-          ],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_leaderboard_get_entry_count_async","externalName":"wortalLeaderboard_getEntryCountAsync","kind":5,"help":"wortal_leaderboard_get_entry_count_async(name);","hidden":false,"returnType":1,"argCount":0,"args":[
-            1,
-          ],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_leaderboard_get_connected_players_entries_async","externalName":"wortalLeaderboard_getConnectedPlayersEntriesAsync","kind":5,"help":"wortal_leaderboard_get_connected_players_entries_async(name, count, offset);","hidden":false,"returnType":1,"argCount":0,"args":[
+          ],"documentation":"","externalName":"wortalLeaderboard_sendEntryAsync","help":"wortal_leaderboard_send_entry_async(name, score, details);","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_leaderboard_get_entries_async","argCount":0,"args":[
             1,
             2,
             2,
-          ],"documentation":"",},
-      ],"constants":[],"ProxyFiles":[],"copyToTargets":32,"usesRunnerInterface":false,"order":[],},
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","filename":"wortal-player.js","origname":"","init":"","final":"","kind":5,"uncompress":false,"functions":[
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_player_get_id","externalName":"wortalPlayer_getID","kind":5,"help":"wortal_player_get_id();","hidden":false,"returnType":1,"argCount":0,"args":[],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_player_get_name","externalName":"wortalPlayer_getName","kind":5,"help":"wortal_player_get_name();","hidden":false,"returnType":1,"argCount":0,"args":[],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_player_get_photo","externalName":"wortalPlayer_getPhoto","kind":5,"help":"wortal_player_get_photo();","hidden":false,"returnType":1,"argCount":0,"args":[],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_player_is_first_play","externalName":"wortalPlayer_isFirstPlay","kind":5,"help":"wortal_player_is_first_play();","hidden":false,"returnType":2,"argCount":0,"args":[],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_player_get_data_async","externalName":"wortalPlayer_getDataAsync","kind":5,"help":"wortal_player_get_data_async(keys);","hidden":false,"returnType":1,"argCount":0,"args":[
+          ],"documentation":"","externalName":"wortalLeaderboard_getEntriesAsync","help":"wortal_leaderboard_get_entries_async(name, count, offset);","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_leaderboard_get_player_entry_async","argCount":0,"args":[
             1,
-          ],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_player_set_data_async","externalName":"wortalPlayer_setDataAsync","kind":5,"help":"wortal_player_set_data_async(data);","hidden":false,"returnType":1,"argCount":0,"args":[
+          ],"documentation":"","externalName":"wortalLeaderboard_getPlayerEntryAsync","help":"wortal_leaderboard_get_player_entry_async(name);","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_leaderboard_get_entry_count_async","argCount":0,"args":[
             1,
-          ],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_player_get_connected_players_async","externalName":"wortalPlayer_getConnectedPlayersAsync","kind":5,"help":"wortal_player_get_connected_players_async(payload);","hidden":false,"returnType":1,"argCount":0,"args":[
+          ],"documentation":"","externalName":"wortalLeaderboard_getEntryCountAsync","help":"wortal_leaderboard_get_entry_count_async(name);","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_leaderboard_get_connected_players_entries_async","argCount":0,"args":[
             1,
-          ],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_player_get_signed_player_info_async","externalName":"wortalPlayer_getSignedPlayerInfoAsync","kind":5,"help":"wortal_player_get_signed_player_info_async();","hidden":false,"returnType":1,"argCount":0,"args":[],"documentation":"",},
-      ],"constants":[],"ProxyFiles":[],"copyToTargets":32,"usesRunnerInterface":false,"order":[],},
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","filename":"wortal-session.js","origname":"","init":"","final":"","kind":5,"uncompress":false,"functions":[
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_session_get_entry_point_data","externalName":"wortalSession_getEntryPointData","kind":5,"help":"wortal_session_get_entry_point_data();","hidden":false,"returnType":1,"argCount":0,"args":[],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_session_get_entry_point_async","externalName":"wortalSession_getEntryPointAsync","kind":5,"help":"wortal_session_get_entry_point_async();","hidden":false,"returnType":1,"argCount":0,"args":[],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_session_set_session_data","externalName":"wortalSession_setSessionData","kind":5,"help":"wortal_session_set_session_data(data);","hidden":false,"returnType":1,"argCount":0,"args":[
+            2,
+            2,
+          ],"documentation":"","externalName":"wortalLeaderboard_getConnectedPlayersEntriesAsync","help":"wortal_leaderboard_get_connected_players_entries_async(name, count, offset);","hidden":false,"kind":5,"returnType":1,},
+      ],"init":"","kind":5,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":32,"filename":"wortal-player.js","final":"","functions":[
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_player_get_id","argCount":0,"args":[],"documentation":"","externalName":"wortalPlayer_getID","help":"wortal_player_get_id();","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_player_get_name","argCount":0,"args":[],"documentation":"","externalName":"wortalPlayer_getName","help":"wortal_player_get_name();","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_player_get_photo","argCount":0,"args":[],"documentation":"","externalName":"wortalPlayer_getPhoto","help":"wortal_player_get_photo();","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_player_is_first_play","argCount":0,"args":[],"documentation":"","externalName":"wortalPlayer_isFirstPlay","help":"wortal_player_is_first_play();","hidden":false,"kind":5,"returnType":2,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_player_get_data_async","argCount":0,"args":[
             1,
-          ],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_session_get_locale","externalName":"wortalSession_getLocale","kind":5,"help":"wortal_session_get_locale();","hidden":false,"returnType":1,"argCount":0,"args":[],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_session_get_traffic_source","externalName":"wortalSession_getTrafficSource","kind":5,"help":"wortal_session_get_traffic_source();","hidden":false,"returnType":1,"argCount":0,"args":[],"documentation":"",},
-      ],"constants":[],"ProxyFiles":[],"copyToTargets":32,"usesRunnerInterface":false,"order":[],},
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","filename":"wortal.js","origname":"","init":"","final":"","kind":5,"uncompress":false,"functions":[],"constants":[],"ProxyFiles":[],"copyToTargets":32,"usesRunnerInterface":false,"order":[],},
+          ],"documentation":"","externalName":"wortalPlayer_getDataAsync","help":"wortal_player_get_data_async(keys);","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_player_set_data_async","argCount":0,"args":[
+            1,
+          ],"documentation":"","externalName":"wortalPlayer_setDataAsync","help":"wortal_player_set_data_async(data);","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_player_get_connected_players_async","argCount":0,"args":[
+            1,
+          ],"documentation":"","externalName":"wortalPlayer_getConnectedPlayersAsync","help":"wortal_player_get_connected_players_async(payload);","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_player_get_signed_player_info_async","argCount":0,"args":[],"documentation":"","externalName":"wortalPlayer_getSignedPlayerInfoAsync","help":"wortal_player_get_signed_player_info_async();","hidden":false,"kind":5,"returnType":1,},
+      ],"init":"","kind":5,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":32,"filename":"wortal-session.js","final":"","functions":[
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_session_get_entry_point_data","argCount":0,"args":[],"documentation":"","externalName":"wortalSession_getEntryPointData","help":"wortal_session_get_entry_point_data();","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_session_get_entry_point_async","argCount":0,"args":[],"documentation":"","externalName":"wortalSession_getEntryPointAsync","help":"wortal_session_get_entry_point_async();","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_session_set_session_data","argCount":0,"args":[
+            1,
+          ],"documentation":"","externalName":"wortalSession_setSessionData","help":"wortal_session_set_session_data(data);","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_session_get_locale","argCount":0,"args":[],"documentation":"","externalName":"wortalSession_getLocale","help":"wortal_session_get_locale();","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_session_get_traffic_source","argCount":0,"args":[],"documentation":"","externalName":"wortalSession_getTrafficSource","help":"wortal_session_get_traffic_source();","hidden":false,"kind":5,"returnType":1,},
+      ],"init":"","kind":5,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":32,"filename":"wortal.js","final":"","functions":[],"init":"","kind":5,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
   ],
-  "classname": "",
-  "tvosclassname": null,
-  "tvosdelegatename": null,
-  "iosdelegatename": "",
-  "androidclassname": "",
-  "sourcedir": "",
-  "androidsourcedir": "",
-  "macsourcedir": "",
-  "maccompilerflags": "",
-  "tvosmaccompilerflags": "",
-  "maclinkerflags": "",
-  "tvosmaclinkerflags": "",
-  "iosplistinject": "",
-  "tvosplistinject": "",
-  "androidinject": "",
-  "androidmanifestinject": "",
-  "androidactivityinject": "",
   "gradleinject": "",
-  "androidcodeinjection": "",
   "hasConvertedCodeInjection": true,
-  "ioscodeinjection": "",
-  "tvoscodeinjection": "",
-  "iosSystemFrameworkEntries": [],
-  "tvosSystemFrameworkEntries": [],
-  "iosThirdPartyFrameworkEntries": [],
-  "tvosThirdPartyFrameworkEntries": [],
+  "helpfile": "",
   "IncludedResources": [],
-  "androidPermissions": [],
-  "copyToTargets": 32,
-  "iosCocoaPods": "",
-  "tvosCocoaPods": "",
+  "installdir": "",
   "iosCocoaPodDependencies": "",
-  "tvosCocoaPodDependencies": "",
+  "iosCocoaPods": "",
+  "ioscodeinjection": "",
+  "iosdelegatename": "",
+  "iosplistinject": "",
+  "iosProps": false,
+  "iosSystemFrameworkEntries": [],
+  "iosThirdPartyFrameworkEntries": [],
+  "license": "",
+  "maccompilerflags": "",
+  "maclinkerflags": "",
+  "macsourcedir": "",
+  "options": [],
+  "optionsFile": "options.json",
+  "packageId": "",
   "parent": {
     "name": "Extensions",
     "path": "folders/Extensions.yy",
   },
+  "productId": "",
+  "sourcedir": "",
+  "supportedTargets": -1,
+  "tvosclassname": null,
+  "tvosCocoaPodDependencies": "",
+  "tvosCocoaPods": "",
+  "tvoscodeinjection": "",
+  "tvosdelegatename": null,
+  "tvosmaccompilerflags": "",
+  "tvosmaclinkerflags": "",
+  "tvosplistinject": "",
+  "tvosProps": false,
+  "tvosSystemFrameworkEntries": [],
+  "tvosThirdPartyFrameworkEntries": [],
 }
