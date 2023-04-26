@@ -23,3 +23,7 @@ function wortalSession_getLocale() {
 function wortalSession_getTrafficSource() {
     return JSON.stringify(window.Wortal.session.getTrafficSource);
 }
+
+function wortalSession_getPlatform() {
+    return window.Wortal.session.getPlatform();
+}
