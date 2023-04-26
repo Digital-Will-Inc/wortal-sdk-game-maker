@@ -18,6 +18,9 @@ if (ID != undefined) {
 			case "ADS_AD_VIEWED_CALLBACK":
 			// Reward player for watching the ad.
 			break;
+			case "ADS_NO_FILL_CALLBACK":
+			// Resume game and audio here.
+			break;
 		}
 	}
 }

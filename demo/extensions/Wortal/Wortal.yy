@@ -79,6 +79,15 @@
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_context_update_async","argCount":0,"args":[
             1,
           ],"documentation":"","externalName":"wortalContext_updateAsync","help":"wortal_context_update_async(payload);","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_context_get_type","argCount":0,"args":[],"documentation":"","externalName":"wortalContext_getType","help":"wortal_context_get_type();","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_context_get_players_async","argCount":0,"args":[],"documentation":"","externalName":"wortalContext_getPlayersAsync","help":"wortal_context_get_players_async();","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_context_share_link_async","argCount":0,"args":[
+            1,
+          ],"documentation":"","externalName":"wortalContext_shareLinkAsync","help":"wortal_context_share_link_async(payload);","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_context_is_size_between","argCount":0,"args":[
+            2,
+            2,
+          ],"documentation":"","externalName":"wortalContext_isSizeBetween","help":"wortal_context_is_size_between(minSize, maxSize);","hidden":false,"kind":5,"returnType":1,},
       ],"init":"","kind":5,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
     {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":32,"filename":"wortal-iap.js","final":"","functions":[
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_iap_get_catalog_async","argCount":0,"args":[],"documentation":"","externalName":"wortalIAP_getCatalogAsync","help":"wortal_iap_get_catalog_async();","hidden":false,"kind":5,"returnType":1,},
@@ -135,6 +144,11 @@
             1,
           ],"documentation":"","externalName":"wortalPlayer_getConnectedPlayersAsync","help":"wortal_player_get_connected_players_async(payload);","hidden":false,"kind":5,"returnType":1,},
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_player_get_signed_player_info_async","argCount":0,"args":[],"documentation":"","externalName":"wortalPlayer_getSignedPlayerInfoAsync","help":"wortal_player_get_signed_player_info_async();","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_player_flush_data_async","argCount":0,"args":[],"documentation":"","externalName":"wortalPlayer_flushDataAsync","help":"wortal_player_flush_data_async();","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_player_get_asid_async","argCount":0,"args":[],"documentation":"","externalName":"wortalPlayer_getASIDAsync","help":"wortal_player_get_asid_async();","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_player_get_signed_asid_async","argCount":0,"args":[],"documentation":"","externalName":"wortalPlayer_getSignedASIDAsync","help":"wortal_player_get_signed_asid_async();","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_player_can_subscribe_bot_async","argCount":0,"args":[],"documentation":"","externalName":"wortalPlayer_canSubscribeBotAsync","help":"wortal_player_can_subscribe_bot_async();","hidden":false,"kind":5,"returnType":2,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_player_subscribe_bot_async","argCount":0,"args":[],"documentation":"","externalName":"wortalPlayer_subscribeBotAsync","help":"wortal_player_subscribe_bot_async();","hidden":false,"kind":5,"returnType":1,},
       ],"init":"","kind":5,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
     {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":32,"filename":"wortal-session.js","final":"","functions":[
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_session_get_entry_point_data","argCount":0,"args":[],"documentation":"","externalName":"wortalSession_getEntryPointData","help":"wortal_session_get_entry_point_data();","hidden":false,"kind":5,"returnType":1,},
@@ -144,12 +158,15 @@
           ],"documentation":"","externalName":"wortalSession_setSessionData","help":"wortal_session_set_session_data(data);","hidden":false,"kind":5,"returnType":1,},
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_session_get_locale","argCount":0,"args":[],"documentation":"","externalName":"wortalSession_getLocale","help":"wortal_session_get_locale();","hidden":false,"kind":5,"returnType":1,},
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_session_get_traffic_source","argCount":0,"args":[],"documentation":"","externalName":"wortalSession_getTrafficSource","help":"wortal_session_get_traffic_source();","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_session_get_platform","argCount":0,"args":[],"documentation":"","externalName":"wortalSession_getPlatform","help":"wortal_session_get_platform();","hidden":false,"kind":5,"returnType":1,},
       ],"init":"","kind":5,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
     {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":32,"filename":"wortal.js","final":"","functions":[],"init":"","kind":5,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
   ],
   "gradleinject": "",
   "hasConvertedCodeInjection": true,
   "helpfile": "",
+  "HTML5CodeInjection": "",
+  "html5Props": false,
   "IncludedResources": [],
   "installdir": "",
   "iosCocoaPodDependencies": "",
