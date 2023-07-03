@@ -16,7 +16,7 @@
   "date": "2022-09-27T09:56:42.1953214+09:00",
   "description": "Wortal SDK for GameMaker",
   "exportToGame": true,
-  "extensionVersion": "2.0.0",
+  "extensionVersion": "2.3.0",
   "files": [
     {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":32,"filename":"wortal-ads.js","final":"","functions":[
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_ads_show_interstitial","argCount":0,"args":[
@@ -53,6 +53,20 @@
             1,
             2,
           ],"documentation":"","externalName":"wortalAnalytics_logTutorialEnd","help":"wortal_analytics_log_tutorial_end(tutorial, wasCompleted);","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_analytics_log_social_invite","argCount":0,"args":[
+            1,
+          ],"documentation":"","externalName":"wortalAnalytics_logSocialInvite","help":"wortal_analytics_log_social_invite(placement);","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_analytics_log_social_share","argCount":0,"args":[
+            1,
+          ],"documentation":"","externalName":"wortalAnalytics_logSocialShare","help":"wortal_analytics_log_social_share(placement);","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_analytics_log_purchase","argCount":0,"args":[
+            1,
+            1,
+          ],"documentation":"","externalName":"wortalAnalytics_logPurchase","help":"wortal_analytics_log_purchase(productID, details);","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_analytics_log_purchase_subscription","argCount":0,"args":[
+            1,
+            1,
+          ],"documentation":"","externalName":"wortalAnalytics_logPurchaseSubscription","help":"wortal_analytics_log_purchase_subscription(productID, details);","hidden":false,"kind":5,"returnType":1,},
       ],"init":"","kind":5,"order":[
         {"name":"wortal_analytics_log_level_start","path":"extensions/Wortal/Wortal.yy",},
         {"name":"wortal_analytics_log_level_end","path":"extensions/Wortal/Wortal.yy",},

@@ -25,3 +25,19 @@ function wortalAnalytics_logTutorialEnd(tutorial, wasCompleted) {
 function wortalAnalytics_logGameChoice(decision, choice) {
     window.Wortal.analytics.logGameChoice(decision, choice);
 }
+
+function wortalAnalytics_logSocialInvite(placement) {
+    window.Wortal.analytics.logSocialInvite(placement);
+}
+
+function wortalAnalytics_logSocialShare(placement) {
+    window.Wortal.analytics.logSocialShare(placement);
+}
+
+function wortalAnalytics_logPurchase(productID, details) {
+    window.Wortal.analytics.logPurchase(productID, details);
+}
+
+function wortalAnalytics_logPurchaseSubscription(productID, details) {
+    window.Wortal.analytics.logPurchaseSubscription(productID, details);
+}
