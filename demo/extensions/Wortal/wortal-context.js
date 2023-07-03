@@ -46,6 +46,16 @@ function wortalContext_switchAsync(contextId) {
         });
 }
 
+function wortalContext_inviteAsync(payload) {
+    window.Wortal.context.inviteAsync(JSON.parse(payload))
+        .then(() => {
+            _wortalCallback(WORTAL_EVENTS.CONTEXT_INVITE_CALLBACK, 1, null, null);
+        })
+        .catch(error => {
+            _wortalCallback(WORTAL_EVENTS.CONTEXT_INVITE_CALLBACK, 0, null, JSON.stringify(error));
+        });
+}
+
 function wortalContext_shareAsync(payload) {
     window.Wortal.context.shareAsync(JSON.parse(payload))
         .then(shareResult => {

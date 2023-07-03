@@ -102,7 +102,22 @@
             2,
             2,
           ],"documentation":"","externalName":"wortalContext_isSizeBetween","help":"wortal_context_is_size_between(minSize, maxSize);","hidden":false,"kind":5,"returnType":1,},
-      ],"init":"","kind":5,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_context_invite_async","argCount":0,"args":[
+            1,
+          ],"documentation":"","externalName":"wortalContext_inviteAsync","help":"wortal_context_invite_async(payload);","hidden":false,"kind":5,"returnType":1,},
+      ],"init":"","kind":5,"order":[
+        {"name":"wortal_context_choose_async","path":"extensions/Wortal/Wortal.yy",},
+        {"name":"wortal_context_get_id","path":"extensions/Wortal/Wortal.yy",},
+        {"name":"wortal_context_create_async","path":"extensions/Wortal/Wortal.yy",},
+        {"name":"wortal_context_switch_async","path":"extensions/Wortal/Wortal.yy",},
+        {"name":"wortal_context_invite_async","path":"extensions/Wortal/Wortal.yy",},
+        {"name":"wortal_context_share_async","path":"extensions/Wortal/Wortal.yy",},
+        {"name":"wortal_context_update_async","path":"extensions/Wortal/Wortal.yy",},
+        {"name":"wortal_context_get_type","path":"extensions/Wortal/Wortal.yy",},
+        {"name":"wortal_context_get_players_async","path":"extensions/Wortal/Wortal.yy",},
+        {"name":"wortal_context_share_link_async","path":"extensions/Wortal/Wortal.yy",},
+        {"name":"wortal_context_is_size_between","path":"extensions/Wortal/Wortal.yy",},
+      ],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
     {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":32,"filename":"wortal-iap.js","final":"","functions":[
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_iap_get_catalog_async","argCount":0,"args":[],"documentation":"","externalName":"wortalIAP_getCatalogAsync","help":"wortal_iap_get_catalog_async();","hidden":false,"kind":5,"returnType":1,},
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_iap_is_enabled","argCount":0,"args":[],"documentation":"","externalName":"wortalIAP_isEnabled","help":"wortal_iap_is_enabled();","hidden":false,"kind":5,"returnType":2,},
