@@ -16,7 +16,7 @@
   "date": "2022-09-27T09:56:42.1953214+09:00",
   "description": "Wortal SDK for GameMaker",
   "exportToGame": true,
-  "extensionVersion": "2.0.0",
+  "extensionVersion": "2.3.0",
   "files": [
     {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":32,"filename":"wortal-ads.js","final":"","functions":[
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_ads_show_interstitial","argCount":0,"args":[
@@ -53,6 +53,20 @@
             1,
             2,
           ],"documentation":"","externalName":"wortalAnalytics_logTutorialEnd","help":"wortal_analytics_log_tutorial_end(tutorial, wasCompleted);","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_analytics_log_social_invite","argCount":0,"args":[
+            1,
+          ],"documentation":"","externalName":"wortalAnalytics_logSocialInvite","help":"wortal_analytics_log_social_invite(placement);","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_analytics_log_social_share","argCount":0,"args":[
+            1,
+          ],"documentation":"","externalName":"wortalAnalytics_logSocialShare","help":"wortal_analytics_log_social_share(placement);","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_analytics_log_purchase","argCount":0,"args":[
+            1,
+            1,
+          ],"documentation":"","externalName":"wortalAnalytics_logPurchase","help":"wortal_analytics_log_purchase(productID, details);","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_analytics_log_purchase_subscription","argCount":0,"args":[
+            1,
+            1,
+          ],"documentation":"","externalName":"wortalAnalytics_logPurchaseSubscription","help":"wortal_analytics_log_purchase_subscription(productID, details);","hidden":false,"kind":5,"returnType":1,},
       ],"init":"","kind":5,"order":[
         {"name":"wortal_analytics_log_level_start","path":"extensions/Wortal/Wortal.yy",},
         {"name":"wortal_analytics_log_level_end","path":"extensions/Wortal/Wortal.yy",},
@@ -63,7 +77,7 @@
         {"name":"wortal_analytics_log_game_choice","path":"extensions/Wortal/Wortal.yy",},
       ],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
     {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":32,"filename":"wortal-context.js","final":"","functions":[
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_context_choose_async","argCount":0,"args":[
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_context_choose_async","argCount":-1,"args":[
             1,
           ],"documentation":"","externalName":"wortalContext_chooseAsync","help":"wortal_context_choose_async(payload);","hidden":false,"kind":5,"returnType":1,},
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_context_get_id","argCount":0,"args":[],"documentation":"","externalName":"wortalContext_getId","help":"wortal_context_get_id();","hidden":false,"kind":5,"returnType":1,},
@@ -88,7 +102,22 @@
             2,
             2,
           ],"documentation":"","externalName":"wortalContext_isSizeBetween","help":"wortal_context_is_size_between(minSize, maxSize);","hidden":false,"kind":5,"returnType":1,},
-      ],"init":"","kind":5,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_context_invite_async","argCount":0,"args":[
+            1,
+          ],"documentation":"","externalName":"wortalContext_inviteAsync","help":"wortal_context_invite_async(payload);","hidden":false,"kind":5,"returnType":1,},
+      ],"init":"","kind":5,"order":[
+        {"name":"wortal_context_choose_async","path":"extensions/Wortal/Wortal.yy",},
+        {"name":"wortal_context_get_id","path":"extensions/Wortal/Wortal.yy",},
+        {"name":"wortal_context_create_async","path":"extensions/Wortal/Wortal.yy",},
+        {"name":"wortal_context_switch_async","path":"extensions/Wortal/Wortal.yy",},
+        {"name":"wortal_context_invite_async","path":"extensions/Wortal/Wortal.yy",},
+        {"name":"wortal_context_share_async","path":"extensions/Wortal/Wortal.yy",},
+        {"name":"wortal_context_update_async","path":"extensions/Wortal/Wortal.yy",},
+        {"name":"wortal_context_get_type","path":"extensions/Wortal/Wortal.yy",},
+        {"name":"wortal_context_get_players_async","path":"extensions/Wortal/Wortal.yy",},
+        {"name":"wortal_context_share_link_async","path":"extensions/Wortal/Wortal.yy",},
+        {"name":"wortal_context_is_size_between","path":"extensions/Wortal/Wortal.yy",},
+      ],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
     {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":32,"filename":"wortal-iap.js","final":"","functions":[
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_iap_get_catalog_async","argCount":0,"args":[],"documentation":"","externalName":"wortalIAP_getCatalogAsync","help":"wortal_iap_get_catalog_async();","hidden":false,"kind":5,"returnType":1,},
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_iap_is_enabled","argCount":0,"args":[],"documentation":"","externalName":"wortalIAP_isEnabled","help":"wortal_iap_is_enabled();","hidden":false,"kind":5,"returnType":2,},
@@ -129,6 +158,20 @@
             2,
           ],"documentation":"","externalName":"wortalLeaderboard_getConnectedPlayersEntriesAsync","help":"wortal_leaderboard_get_connected_players_entries_async(name, count, offset);","hidden":false,"kind":5,"returnType":1,},
       ],"init":"","kind":5,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":32,"filename":"wortal-notifications.js","final":"","functions":[
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_notifications_schedule_async","argCount":1,"args":[
+            1,
+          ],"documentation":"","externalName":"wortalNotifications_scheduleAsync","help":"wortal_notifications_schedule_async(payload);","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_notifications_get_history_async","argCount":0,"args":[
+            1,
+          ],"documentation":"","externalName":"wortalNotifications_getHistoryAsync","help":"wortal_notifications_get_history_async();","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_notifications_cancel_async","argCount":1,"args":[
+            1,
+          ],"documentation":"","externalName":"wortalNotifications_cancelAsync","help":"wortal_notifications_cancel_async(id);","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_notifications_cancel_all_async","argCount":-1,"args":[
+            1,
+          ],"documentation":"","externalName":"wortalNotifications_cancelAllAsync","help":"wortal_notifications_cancel_all_async(label);","hidden":false,"kind":5,"returnType":1,},
+      ],"init":"","kind":5,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
     {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":32,"filename":"wortal-player.js","final":"","functions":[
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_player_get_id","argCount":0,"args":[],"documentation":"","externalName":"wortalPlayer_getID","help":"wortal_player_get_id();","hidden":false,"kind":5,"returnType":1,},
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_player_get_name","argCount":0,"args":[],"documentation":"","externalName":"wortalPlayer_getName","help":"wortal_player_get_name();","hidden":false,"kind":5,"returnType":1,},
@@ -160,7 +203,10 @@
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_session_get_traffic_source","argCount":0,"args":[],"documentation":"","externalName":"wortalSession_getTrafficSource","help":"wortal_session_get_traffic_source();","hidden":false,"kind":5,"returnType":1,},
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_session_get_platform","argCount":0,"args":[],"documentation":"","externalName":"wortalSession_getPlatform","help":"wortal_session_get_platform();","hidden":false,"kind":5,"returnType":1,},
       ],"init":"","kind":5,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":32,"filename":"wortal.js","final":"","functions":[],"init":"","kind":5,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":32,"filename":"wortal.js","final":"","functions":[
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_perform_haptic_feedback_async","argCount":0,"args":[],"documentation":"","externalName":"wortal_performHapticFeedbackAsync","help":"wortal_perform_haptic_feedback_async();","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_get_supported_apis","argCount":0,"args":[],"documentation":"","externalName":"wortal_getSupportedAPIs","help":"wortal_get_supported_apis();","hidden":false,"kind":5,"returnType":1,},
+      ],"init":"","kind":5,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
   ],
   "gradleinject": "",
   "hasConvertedCodeInjection": true,
