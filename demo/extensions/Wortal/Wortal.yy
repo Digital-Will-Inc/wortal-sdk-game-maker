@@ -158,6 +158,20 @@
             2,
           ],"documentation":"","externalName":"wortalLeaderboard_getConnectedPlayersEntriesAsync","help":"wortal_leaderboard_get_connected_players_entries_async(name, count, offset);","hidden":false,"kind":5,"returnType":1,},
       ],"init":"","kind":5,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":32,"filename":"wortal-notifications.js","final":"","functions":[
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_notifications_schedule_async","argCount":1,"args":[
+            1,
+          ],"documentation":"","externalName":"wortalNotifications_scheduleAsync","help":"wortal_notifications_schedule_async(payload);","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_notifications_get_history_async","argCount":0,"args":[
+            1,
+          ],"documentation":"","externalName":"wortalNotifications_getHistoryAsync","help":"wortal_notifications_get_history_async();","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_notifications_cancel_async","argCount":1,"args":[
+            1,
+          ],"documentation":"","externalName":"wortalNotifications_cancelAsync","help":"wortal_notifications_cancel_async(id);","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_notifications_cancel_all_async","argCount":-1,"args":[
+            1,
+          ],"documentation":"","externalName":"wortalNotifications_cancelAllAsync","help":"wortal_notifications_cancel_all_async(label);","hidden":false,"kind":5,"returnType":1,},
+      ],"init":"","kind":5,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
     {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":32,"filename":"wortal-player.js","final":"","functions":[
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_player_get_id","argCount":0,"args":[],"documentation":"","externalName":"wortalPlayer_getID","help":"wortal_player_get_id();","hidden":false,"kind":5,"returnType":1,},
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_player_get_name","argCount":0,"args":[],"documentation":"","externalName":"wortalPlayer_getName","help":"wortal_player_get_name();","hidden":false,"kind":5,"returnType":1,},
