@@ -81,17 +81,17 @@ and send messages to each other.
 payload = {
     image: "data:base64image",
     text: "Invite text",
-    caption: "Play",
+    cta: "Play",
     data: { exampleData: "yourData" },
 }
 
-wortal_context_choose_async(json_stringify(payload));
+wortal_context_invite_async(json_stringify(payload));
 
 // Share your game activity with friends.
 payload = {
     image: "data:base64image",
     text: "Share text",
-    caption: "Play",
+    cta: "Play",
     data: { exampleData: "yourData" },
 }
 
@@ -203,6 +203,8 @@ if (ID != undefined) {
 List of all callback events and their payloads:
 
 ```javascript
+ON_PAUSE_CALLBACK // Void
+PERFORM_HAPTIC_FEEDBACK_CALLBACK // Void
 ADS_BEFORE_AD_CALLBACK // Void
 ADS_AFTER_AD_CALLBACK // Void
 ADS_AD_DISMISSED_CALLBACK // Void
@@ -210,7 +212,9 @@ ADS_AD_VIEWED_CALLBACK // Void
 CONTEXT_CHOOSE_CALLBACK // Void
 CONTEXT_CREATE_CALLBACK // Void
 CONTEXT_SWITCH_CALLBACK // Void
+CONTEXT_INVITE_CALLBACK // Void
 CONTEXT_SHARE_CALLBACK // Number
+CONTEXT_SHARE_LINK_CALLBACK // Void
 CONTEXT_UPDATE_CALLBACK // Void
 IAP_GET_CATALOG_CALLBACK // Product[]
 IAP_GET_PURCHASES_CALLBACK // Purchase[]
@@ -222,10 +226,18 @@ LEADERBOARD_GET_ENTRIES_CALLBACK // LeaderboardEntry[]
 LEADERBOARD_GET_PLAYER_ENTRY_CALLBACK // LeaderboardEntry
 LEADERBOARD_GET_ENTRY_COUNT_CALLBACK // Number
 LEADERBOARD_GET_CONNECTED_PLAYERS_ENTRIES_CALLBACK // LeaderboardEntry[]
+NOTIFICATIONS_SCHEDULE_CALLBACK // NotificationScheduleResult
+NOTIFICATIONS_GET_HISTORY_CALLBACK // ScheduledNotification[]
+NOTIFICATIONS_CANCEL_CALLBACK // Boolean
+NOTIFICATIONS_CANCEL_ALL_CALLBACK // Boolean
 PLAYER_GET_DATA_CALLBACK // Developer-defined object
 PLAYER_SET_DATA_CALLBACK // Void
 PLAYER_GET_CONNECTED_PLAYERS_CALLBACK // Player[]
 PLAYER_GET_SIGNED_PLAYER_INFO_CALLBACK // Object with id and signature
+PLAYER_GET_ASID_CALLBACK // String
+PLAYER_GET_SIGNED_ASID_CALLBACK // Object with id and signature
+PLAYER_CAN_SUBSCRIBE_BOT_CALLBACK // Boolean
+PLAYER_SUBSCRIBE_BOT_CALLBACK // Void
 SESSION_GET_ENTRY_POINT_CALLBACK // String
 ```
 
