@@ -1,5 +1,6 @@
 const WORTAL_EVENTS = {
     ON_PAUSE_CALLBACK: "ON_PAUSE_CALLBACK",
+    PERFORM_HAPTIC_FEEDBACK_CALLBACK: "PERFORM_HAPTIC_FEEDBACK_CALLBACK",
     ADS_BEFORE_AD_CALLBACK: "ADS_BEFORE_AD_CALLBACK",
     ADS_AFTER_AD_CALLBACK: "ADS_AFTER_AD_CALLBACK",
     ADS_AD_DISMISSED_CALLBACK: "ADS_AD_DISMISSED_CALLBACK",
@@ -47,4 +48,14 @@ function _wortalCallback(event, success, payload, error) {
 
 if (window.Wortal) {
     window.Wortal.onPause(() => _wortalCallback(WORTAL_EVENTS.ON_PAUSE_CALLBACK));
+}
+
+function wortal_performHapticFeedbackAsync() {
+    window.Wortal.performHapticFeedbackAsync()
+        .then(() => {
+            _wortalCallback(WORTAL_EVENTS.PERFORM_HAPTIC_FEEDBACK_CALLBACK, 1, null, null);
+        })
+        .catch(error => {
+            _wortalCallback(WORTAL_EVENTS.PERFORM_HAPTIC_FEEDBACK_CALLBACK, 0, null, JSON.stringify(error));
+        });
 }
