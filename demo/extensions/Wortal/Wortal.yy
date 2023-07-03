@@ -77,7 +77,7 @@
         {"name":"wortal_analytics_log_game_choice","path":"extensions/Wortal/Wortal.yy",},
       ],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
     {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":32,"filename":"wortal-context.js","final":"","functions":[
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_context_choose_async","argCount":0,"args":[
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_context_choose_async","argCount":-1,"args":[
             1,
           ],"documentation":"","externalName":"wortalContext_chooseAsync","help":"wortal_context_choose_async(payload);","hidden":false,"kind":5,"returnType":1,},
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_context_get_id","argCount":0,"args":[],"documentation":"","externalName":"wortalContext_getId","help":"wortal_context_get_id();","hidden":false,"kind":5,"returnType":1,},
@@ -191,6 +191,7 @@
       ],"init":"","kind":5,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
     {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":32,"filename":"wortal.js","final":"","functions":[
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_perform_haptic_feedback_async","argCount":0,"args":[],"documentation":"","externalName":"wortal_performHapticFeedbackAsync","help":"wortal_perform_haptic_feedback_async();","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_get_supported_apis","argCount":0,"args":[],"documentation":"","externalName":"wortal_getSupportedAPIs","help":"wortal_get_supported_apis();","hidden":false,"kind":5,"returnType":1,},
       ],"init":"","kind":5,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
   ],
   "gradleinject": "",

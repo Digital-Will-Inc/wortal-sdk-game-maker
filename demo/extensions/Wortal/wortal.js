@@ -59,3 +59,7 @@ function wortal_performHapticFeedbackAsync() {
             _wortalCallback(WORTAL_EVENTS.PERFORM_HAPTIC_FEEDBACK_CALLBACK, 0, null, JSON.stringify(error));
         });
 }
+
+function wortal_getSupportedAPIs() {
+    return JSON.stringify(window.Wortal.getSupportedAPIs());
+}
