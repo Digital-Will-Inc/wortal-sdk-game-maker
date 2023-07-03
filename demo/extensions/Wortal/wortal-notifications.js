@@ -21,7 +21,7 @@ function wortalNotifications_getHistoryAsync() {
 function wortalNotifications_cancelAsync(id) {
     window.Wortal.notifications.cancelAsync(id)
         .then(success => {
-            _wortalCallback(WORTAL_EVENTS.NOTIFICATIONS_CANCEL_CALLBACK, 1, success, null);
+            _wortalCallback(WORTAL_EVENTS.NOTIFICATIONS_CANCEL_CALLBACK, 1, success ? 1 : 0, null);
         })
         .catch(error => {
             _wortalCallback(WORTAL_EVENTS.NOTIFICATIONS_CANCEL_CALLBACK, 0, null, JSON.stringify(error));
@@ -31,7 +31,7 @@ function wortalNotifications_cancelAsync(id) {
 function wortalNotifications_cancelAllAsync(label) {
     window.Wortal.notifications.cancelAllAsync(label)
         .then(success => {
-            _wortalCallback(WORTAL_EVENTS.NOTIFICATIONS_CANCEL_ALL_CALLBACK, 1, success, null);
+            _wortalCallback(WORTAL_EVENTS.NOTIFICATIONS_CANCEL_ALL_CALLBACK, 1, success ? 1 : 0, null);
         })
         .catch(error => {
             _wortalCallback(WORTAL_EVENTS.NOTIFICATIONS_CANCEL_ALL_CALLBACK, 0, null, JSON.stringify(error));
