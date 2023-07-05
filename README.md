@@ -132,6 +132,29 @@ wortal_leaderboard_get_entries_async("global", 10, 0);
 wortal_leaderboard_send_entry_async("global", 100, "details");
 ```
 
+### Notifications
+
+[API Reference](https://sdk.html5gameportal.com/api/notifications/)
+
+The Notifications API is used to send notifications to the player. These can be used to notify the player
+of an event in the game or to remind them to come back and play.
+
+```typescript
+// Schedule a notification to send to the player.
+payload = {
+    title: "Your energy is full!",
+    body: "Come back and play again.",
+    mediaURL: "https://example.com/image.png",
+    label: "resources-full",
+    scheduleInterval: 300 // 5 minutes
+}
+
+wortal_notifications_schedule_async(json_stringify(payload));
+
+// Cancel a scheduled notification.
+wortal_notifications_cancel_async("notification-id-123");
+```
+
 ### Player
 
 [API Reference](https://sdk.html5gameportal.com/api/player/)
@@ -209,6 +232,7 @@ ADS_BEFORE_AD_CALLBACK // Void
 ADS_AFTER_AD_CALLBACK // Void
 ADS_AD_DISMISSED_CALLBACK // Void
 ADS_AD_VIEWED_CALLBACK // Void
+ADS_NO_FILL_CALLBACK // Void
 CONTEXT_CHOOSE_CALLBACK // Void
 CONTEXT_CREATE_CALLBACK // Void
 CONTEXT_SWITCH_CALLBACK // Void
