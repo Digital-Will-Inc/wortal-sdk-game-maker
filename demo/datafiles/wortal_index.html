@@ -12,7 +12,7 @@
     <!-- Set the title bar of the page -->
     <title>GameMaker Game</title>
 
-    <script src="https://storage.googleapis.com/html5gameportal.com/wortal-sdk/wortal-core-1.5.0.js"></script>
+    <script src="https://storage.googleapis.com/html5gameportal.com/wortal-sdk/wortal-core-1.6.js" data-manual-init="false"></script>
 
     <!-- Set the background colour of the document -->
     <style>
@@ -85,6 +85,7 @@
 <script type="text/javascript" src="html5game/wortal-demo.js?TOQZB=1030758890"></script>
 <script>window.onload = GameMaker_Init;</script>
 <script>
+    // Comment this out if using manual initialization
     setTimeout(() => {
         if (window.Wortal) {
             window.Wortal.setLoadingProgress(100);
