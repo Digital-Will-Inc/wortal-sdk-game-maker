@@ -186,6 +186,30 @@ Details about the current session can be accessed in the Session API.
 wortal_session_get_entry_point_async();
 ```
 
+### Tournament
+
+[API Reference](https://sdk.html5gameportal.com/api/tournament/)
+
+The Tournament API is used to create and manage tournaments for your game.
+
+```javascript
+// Create a tournament.
+const payload = {
+    initialScore: 100,
+    config: {
+        title: "Level 1 Tournament",
+    },
+    data: {
+        level: 1,
+    },
+};
+
+wortal_tournament_create_async(json_stringify(payload));
+
+// Post a score to a tournament.
+wortal_tournament_post_score_async(200);
+```
+
 ### Wortal Callbacks
 The SDK uses many asynchronous calls that have callback events attached to them. These functions are marked with the `_async` suffix.
 You should listen for these callbacks and handle them accordingly in the `Async - Social` event.
@@ -226,6 +250,8 @@ if (ID != undefined) {
 List of all callback events and their payloads:
 
 ```javascript
+INITIALIZE_CALLBACK // Void
+START_GAME_CALLBACK // Void
 ON_PAUSE_CALLBACK // Void
 PERFORM_HAPTIC_FEEDBACK_CALLBACK // Void
 ADS_BEFORE_AD_CALLBACK // Void
@@ -263,6 +289,14 @@ PLAYER_GET_SIGNED_ASID_CALLBACK // Object with id and signature
 PLAYER_CAN_SUBSCRIBE_BOT_CALLBACK // Boolean
 PLAYER_SUBSCRIBE_BOT_CALLBACK // Void
 SESSION_GET_ENTRY_POINT_CALLBACK // String
+SESSION_ON_ORIENTATION_CHANGE_CALLBACK // Orientation
+SESSION_SWITCH_GAME_CALLBACK // Void
+TOURNAMENT_GET_CURRENT_CALLBACK // Tournament
+TOURNAMENT_GET_ALL_CALLBACK // Tournament[]
+TOURNAMENT_POST_SCORE_CALLBACK // Void
+TOURNAMENT_CREATE_CALLBACK // Tournament
+TOURNAMENT_SHARE_CALLBACK // Void
+TOURNAMENT_JOIN_CALLBACK // Void
 ```
 
 ### Demo Project
