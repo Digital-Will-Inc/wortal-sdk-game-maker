@@ -1,3 +1,7 @@
+function wortalAds_isAdBlocked() {
+    return window.Wortal.ads.isAdBlocked() ? 1 : 0;
+}
+
 function wortalAds_showInterstitial(placement, description) {
     window.Wortal.ads.showInterstitial(placement, description,
         () => _wortalCallback(WORTAL_EVENTS.ADS_BEFORE_AD_CALLBACK),
