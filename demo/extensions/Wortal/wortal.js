@@ -1,4 +1,6 @@
 const WORTAL_EVENTS = {
+    INITIALIZE_CALLBACK: "INITIALIZE_CALLBACK",
+    START_GAME_CALLBACK: "START_GAME_CALLBACK",
     ON_PAUSE_CALLBACK: "ON_PAUSE_CALLBACK",
     PERFORM_HAPTIC_FEEDBACK_CALLBACK: "PERFORM_HAPTIC_FEEDBACK_CALLBACK",
     ADS_BEFORE_AD_CALLBACK: "ADS_BEFORE_AD_CALLBACK",
@@ -38,6 +40,14 @@ const WORTAL_EVENTS = {
     PLAYER_CAN_SUBSCRIBE_BOT_CALLBACK: "PLAYER_CAN_SUBSCRIBE_BOT_CALLBACK",
     PLAYER_SUBSCRIBE_BOT_CALLBACK: "PLAYER_SUBSCRIBE_BOT_CALLBACK",
     SESSION_GET_ENTRY_POINT_CALLBACK: "SESSION_GET_ENTRY_POINT_CALLBACK",
+    SESSION_ON_ORIENTATION_CHANGE_CALLBACK: "SESSION_ON_ORIENTATION_CHANGE_CALLBACK",
+    SESSION_SWITCH_GAME_CALLBACK: "SESSION_SWITCH_GAME_CALLBACK",
+    TOURNAMENT_GET_CURRENT_CALLBACK: "TOURNAMENT_GET_CURRENT_CALLBACK",
+    TOURNAMENT_GET_ALL_CALLBACK: "TOURNAMENT_GET_ALL_CALLBACK",
+    TOURNAMENT_POST_SCORE_CALLBACK: "TOURNAMENT_POST_SCORE_CALLBACK",
+    TOURNAMENT_CREATE_CALLBACK: "TOURNAMENT_CREATE_CALLBACK",
+    TOURNAMENT_SHARE_CALLBACK: "TOURNAMENT_SHARE_CALLBACK",
+    TOURNAMENT_JOIN_CALLBACK: "TOURNAMENT_JOIN_CALLBACK",
 };
 
 function _wortalCallback(event, success, payload, error) {
@@ -52,6 +62,34 @@ function _wortalCallback(event, success, payload, error) {
 
 if (window.Wortal) {
     window.Wortal.onPause(() => _wortalCallback(WORTAL_EVENTS.ON_PAUSE_CALLBACK));
+}
+
+function wortal_isInitialized() {
+    return window.Wortal.isInitialized() ? 1 : 0;
+}
+
+function wortal_initializeAsync() {
+    window.Wortal.initializeAsync()
+        .then(() => {
+            _wortalCallback(WORTAL_EVENTS.INITIALIZE_CALLBACK, 1, null, null);
+        })
+        .catch(error => {
+            _wortalCallback(WORTAL_EVENTS.INITIALIZE_CALLBACK, 0, null, JSON.stringify(error));
+        });
+}
+
+function wortal_startGameAsync() {
+    window.Wortal.startGameAsync()
+        .then(() => {
+            _wortalCallback(WORTAL_EVENTS.START_GAME_CALLBACK, 1, null, null);
+        })
+        .catch(error => {
+            _wortalCallback(WORTAL_EVENTS.START_GAME_CALLBACK, 0, null, JSON.stringify(error));
+        });
+}
+
+function wortal_setLoadingProgress(value) {
+    window.Wortal.setLoadingProgress(value);
 }
 
 function wortal_performHapticFeedbackAsync() {

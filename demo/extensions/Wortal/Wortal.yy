@@ -26,6 +26,7 @@
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_ads_show_rewarded","argCount":0,"args":[
             1,
           ],"documentation":"","externalName":"wortalAds_showRewarded","help":"wortal_ads_show_rewarded(description);","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_ads_is_ad_blocked","argCount":0,"args":[],"documentation":"","externalName":"wortalAds_isAdBlocked","help":"wortal_ads_is_ad_blocked()","hidden":false,"kind":5,"returnType":2,},
       ],"init":"","kind":5,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
     {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":32,"filename":"wortal-analytics.js","final":"","functions":[
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_analytics_log_level_start","argCount":0,"args":[
@@ -202,10 +203,38 @@
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_session_get_locale","argCount":0,"args":[],"documentation":"","externalName":"wortalSession_getLocale","help":"wortal_session_get_locale();","hidden":false,"kind":5,"returnType":1,},
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_session_get_traffic_source","argCount":0,"args":[],"documentation":"","externalName":"wortalSession_getTrafficSource","help":"wortal_session_get_traffic_source();","hidden":false,"kind":5,"returnType":1,},
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_session_get_platform","argCount":0,"args":[],"documentation":"","externalName":"wortalSession_getPlatform","help":"wortal_session_get_platform();","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_session_get_device","argCount":0,"args":[],"documentation":"","externalName":"wortalSession_getDevice","help":"wortal_session_get_device()","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_session_get_orientation","argCount":0,"args":[],"documentation":"","externalName":"wortalSession_getOrientation","help":"wortal_session_get_orientation();","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_session_on_orientation_change","argCount":0,"args":[],"documentation":"","externalName":"wortalSession_onOrientationChange","help":"wortal_session_on_orientation_change();","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_session_switch_game_async","argCount":0,"args":[
+            1,
+          ],"documentation":"","externalName":"wortalSession_switchGameAsync","help":"wortal_session_switch_game_async(gameID);","hidden":false,"kind":5,"returnType":1,},
+      ],"init":"","kind":5,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":32,"filename":"wortal-tournament.js","final":"","functions":[
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_tournament_get_current_async","argCount":0,"args":[],"documentation":"","externalName":"wortalTournament_getCurrentAsync","help":"wortal_tournament_get_current_async();","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_tournament_get_all_async","argCount":0,"args":[],"documentation":"","externalName":"wortalTournament_getAllAsync","help":"wortal_tournament_get_all_async();","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_tournament_post_score_async","argCount":0,"args":[
+            2,
+          ],"documentation":"","externalName":"wortalTournament_postScoreAsync","help":"wortal_tournament_post_score_async(score);","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_tournament_create_async","argCount":0,"args":[
+            1,
+          ],"documentation":"","externalName":"wortalTournament_createAsync","help":"wortal_tournament_create_async(payload);","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_tournament_share_async","argCount":0,"args":[
+            1,
+          ],"documentation":"","externalName":"wortalTournament_shareAsync","help":"wortal_tournament_share_async(payload);","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_tournament_join_async","argCount":0,"args":[
+            1,
+          ],"documentation":"","externalName":"wortalTournament_joinAsync","help":"wortal_tournament_join_async(tournamentID);","hidden":false,"kind":5,"returnType":1,},
       ],"init":"","kind":5,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
     {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":32,"filename":"wortal.js","final":"","functions":[
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_perform_haptic_feedback_async","argCount":0,"args":[],"documentation":"","externalName":"wortal_performHapticFeedbackAsync","help":"wortal_perform_haptic_feedback_async();","hidden":false,"kind":5,"returnType":1,},
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_get_supported_apis","argCount":0,"args":[],"documentation":"","externalName":"wortal_getSupportedAPIs","help":"wortal_get_supported_apis();","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_is_initialized","argCount":0,"args":[],"documentation":"","externalName":"wortal_isInitialized","help":"wortal_is_initialized();","hidden":false,"kind":5,"returnType":2,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_initialize_async","argCount":0,"args":[],"documentation":"","externalName":"wortal_initializeAsync","help":"wortal_initialize_async();","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_start_game_async","argCount":0,"args":[],"documentation":"","externalName":"wortal_startGameAsync","help":"wortal_start_game_async();","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_set_loading_progress","argCount":0,"args":[
+            2,
+          ],"documentation":"","externalName":"wortal_setLoadingProgress","help":"wortal_set_loading_progress(value);","hidden":false,"kind":5,"returnType":1,},
       ],"init":"","kind":5,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
   ],
   "gradleinject": "",

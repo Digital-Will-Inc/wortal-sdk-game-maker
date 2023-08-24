@@ -132,6 +132,29 @@ wortal_leaderboard_get_entries_async("global", 10, 0);
 wortal_leaderboard_send_entry_async("global", 100, "details");
 ```
 
+### Notifications
+
+[API Reference](https://sdk.html5gameportal.com/api/notifications/)
+
+The Notifications API is used to send notifications to the player. These can be used to notify the player
+of an event in the game or to remind them to come back and play.
+
+```typescript
+// Schedule a notification to send to the player.
+payload = {
+    title: "Your energy is full!",
+    body: "Come back and play again.",
+    mediaURL: "https://example.com/image.png",
+    label: "resources-full",
+    scheduleInterval: 300 // 5 minutes
+}
+
+wortal_notifications_schedule_async(json_stringify(payload));
+
+// Cancel a scheduled notification.
+wortal_notifications_cancel_async("notification-id-123");
+```
+
 ### Player
 
 [API Reference](https://sdk.html5gameportal.com/api/player/)
@@ -161,6 +184,30 @@ Details about the current session can be accessed in the Session API.
 ```javascript
 // Get the entry point of where the game started from.
 wortal_session_get_entry_point_async();
+```
+
+### Tournament
+
+[API Reference](https://sdk.html5gameportal.com/api/tournament/)
+
+The Tournament API is used to create and manage tournaments for your game.
+
+```javascript
+// Create a tournament.
+const payload = {
+    initialScore: 100,
+    config: {
+        title: "Level 1 Tournament",
+    },
+    data: {
+        level: 1,
+    },
+};
+
+wortal_tournament_create_async(json_stringify(payload));
+
+// Post a score to a tournament.
+wortal_tournament_post_score_async(200);
 ```
 
 ### Wortal Callbacks
@@ -203,12 +250,15 @@ if (ID != undefined) {
 List of all callback events and their payloads:
 
 ```javascript
+INITIALIZE_CALLBACK // Void
+START_GAME_CALLBACK // Void
 ON_PAUSE_CALLBACK // Void
 PERFORM_HAPTIC_FEEDBACK_CALLBACK // Void
 ADS_BEFORE_AD_CALLBACK // Void
 ADS_AFTER_AD_CALLBACK // Void
 ADS_AD_DISMISSED_CALLBACK // Void
 ADS_AD_VIEWED_CALLBACK // Void
+ADS_NO_FILL_CALLBACK // Void
 CONTEXT_CHOOSE_CALLBACK // Void
 CONTEXT_CREATE_CALLBACK // Void
 CONTEXT_SWITCH_CALLBACK // Void
@@ -239,6 +289,14 @@ PLAYER_GET_SIGNED_ASID_CALLBACK // Object with id and signature
 PLAYER_CAN_SUBSCRIBE_BOT_CALLBACK // Boolean
 PLAYER_SUBSCRIBE_BOT_CALLBACK // Void
 SESSION_GET_ENTRY_POINT_CALLBACK // String
+SESSION_ON_ORIENTATION_CHANGE_CALLBACK // Orientation
+SESSION_SWITCH_GAME_CALLBACK // Void
+TOURNAMENT_GET_CURRENT_CALLBACK // Tournament
+TOURNAMENT_GET_ALL_CALLBACK // Tournament[]
+TOURNAMENT_POST_SCORE_CALLBACK // Void
+TOURNAMENT_CREATE_CALLBACK // Tournament
+TOURNAMENT_SHARE_CALLBACK // Void
+TOURNAMENT_JOIN_CALLBACK // Void
 ```
 
 ### Demo Project
