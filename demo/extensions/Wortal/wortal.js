@@ -1,4 +1,6 @@
 const WORTAL_EVENTS = {
+    INITIALIZE_CALLBACK: "INITIALIZE_CALLBACK",
+    START_GAME_CALLBACK: "START_GAME_CALLBACK",
     ON_PAUSE_CALLBACK: "ON_PAUSE_CALLBACK",
     PERFORM_HAPTIC_FEEDBACK_CALLBACK: "PERFORM_HAPTIC_FEEDBACK_CALLBACK",
     ADS_BEFORE_AD_CALLBACK: "ADS_BEFORE_AD_CALLBACK",
@@ -60,6 +62,34 @@ function _wortalCallback(event, success, payload, error) {
 
 if (window.Wortal) {
     window.Wortal.onPause(() => _wortalCallback(WORTAL_EVENTS.ON_PAUSE_CALLBACK));
+}
+
+function wortal_isInitialized() {
+    return window.Wortal.isInitialized() ? 1 : 0;
+}
+
+function wortal_initializeAsync() {
+    window.Wortal.initializeAsync()
+        .then(() => {
+            _wortalCallback(WORTAL_EVENTS.INITIALIZE_CALLBACK, 1, null, null);
+        })
+        .catch(error => {
+            _wortalCallback(WORTAL_EVENTS.INITIALIZE_CALLBACK, 0, null, JSON.stringify(error));
+        });
+}
+
+function wortal_startGameAsync() {
+    window.Wortal.startGameAsync()
+        .then(() => {
+            _wortalCallback(WORTAL_EVENTS.START_GAME_CALLBACK, 1, null, null);
+        })
+        .catch(error => {
+            _wortalCallback(WORTAL_EVENTS.START_GAME_CALLBACK, 0, null, JSON.stringify(error));
+        });
+}
+
+function wortal_setLoadingProgress(value) {
+    window.Wortal.setLoadingProgress(value);
 }
 
 function wortal_performHapticFeedbackAsync() {
