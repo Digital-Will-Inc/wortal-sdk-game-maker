@@ -208,7 +208,7 @@
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_session_on_orientation_change","argCount":0,"args":[],"documentation":"","externalName":"wortalSession_onOrientationChange","help":"wortal_session_on_orientation_change();","hidden":false,"kind":5,"returnType":1,},
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_session_switch_game_async","argCount":0,"args":[
             1,
-          ],"documentation":"","externalName":"","help":"wortal_session_switch_game_async(gameID);","hidden":false,"kind":5,"returnType":1,},
+          ],"documentation":"","externalName":"wortalSession_switchGameAsync","help":"wortal_session_switch_game_async(gameID);","hidden":false,"kind":5,"returnType":1,},
       ],"init":"","kind":5,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
     {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":32,"filename":"wortal-tournament.js","final":"","functions":[
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_tournament_get_current_async","argCount":0,"args":[],"documentation":"","externalName":"wortalTournament_getCurrentAsync","help":"wortal_tournament_get_current_async();","hidden":false,"kind":5,"returnType":1,},
@@ -229,6 +229,12 @@
     {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":32,"filename":"wortal.js","final":"","functions":[
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_perform_haptic_feedback_async","argCount":0,"args":[],"documentation":"","externalName":"wortal_performHapticFeedbackAsync","help":"wortal_perform_haptic_feedback_async();","hidden":false,"kind":5,"returnType":1,},
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_get_supported_apis","argCount":0,"args":[],"documentation":"","externalName":"wortal_getSupportedAPIs","help":"wortal_get_supported_apis();","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_is_initialized","argCount":0,"args":[],"documentation":"","externalName":"wortal_isInitialized","help":"wortal_is_initialized();","hidden":false,"kind":5,"returnType":2,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_initialize_async","argCount":0,"args":[],"documentation":"","externalName":"wortal_initializeAsync","help":"wortal_initialize_async();","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_start_game_async","argCount":0,"args":[],"documentation":"","externalName":"wortal_startGameAsync","help":"wortal_start_game_async();","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_set_loading_progress","argCount":0,"args":[
+            2,
+          ],"documentation":"","externalName":"wortal_setLoadingProgress","help":"wortal_set_loading_progress(value);","hidden":false,"kind":5,"returnType":1,},
       ],"init":"","kind":5,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
   ],
   "gradleinject": "",
