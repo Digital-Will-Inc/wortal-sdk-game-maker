@@ -203,6 +203,22 @@
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_session_get_traffic_source","argCount":0,"args":[],"documentation":"","externalName":"wortalSession_getTrafficSource","help":"wortal_session_get_traffic_source();","hidden":false,"kind":5,"returnType":1,},
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_session_get_platform","argCount":0,"args":[],"documentation":"","externalName":"wortalSession_getPlatform","help":"wortal_session_get_platform();","hidden":false,"kind":5,"returnType":1,},
       ],"init":"","kind":5,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":32,"filename":"wortal-tournament.js","final":"","functions":[
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_tournament_get_current_async","argCount":0,"args":[],"documentation":"","externalName":"wortalTournament_getCurrentAsync","help":"wortal_tournament_get_current_async();","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_tournament_get_all_async","argCount":0,"args":[],"documentation":"","externalName":"wortalTournament_getAllAsync","help":"wortal_tournament_get_all_async();","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_tournament_post_score_async","argCount":0,"args":[
+            2,
+          ],"documentation":"","externalName":"wortalTournament_postScoreAsync","help":"wortal_tournament_post_score_async(score);","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_tournament_create_async","argCount":0,"args":[
+            1,
+          ],"documentation":"","externalName":"wortalTournament_createAsync","help":"wortal_tournament_create_async(payload);","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_tournament_share_async","argCount":0,"args":[
+            1,
+          ],"documentation":"","externalName":"wortalTournament_shareAsync","help":"wortal_tournament_share_async(payload);","hidden":false,"kind":5,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_tournament_join_async","argCount":0,"args":[
+            1,
+          ],"documentation":"","externalName":"wortalTournament_joinAsync","help":"wortal_tournament_join_async(tournamentID);","hidden":false,"kind":5,"returnType":1,},
+      ],"init":"","kind":5,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
     {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":32,"filename":"wortal.js","final":"","functions":[
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_perform_haptic_feedback_async","argCount":0,"args":[],"documentation":"","externalName":"wortal_performHapticFeedbackAsync","help":"wortal_perform_haptic_feedback_async();","hidden":false,"kind":5,"returnType":1,},
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"wortal_get_supported_apis","argCount":0,"args":[],"documentation":"","externalName":"wortal_getSupportedAPIs","help":"wortal_get_supported_apis();","hidden":false,"kind":5,"returnType":1,},
