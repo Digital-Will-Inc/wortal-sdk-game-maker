@@ -1,5 +1,5 @@
 function wortalAchievements_getAchievementsAsync() {
-    window.Wortal.achievements.getAchievementsAsync
+    window.Wortal.achievements.getAchievementsAsync()
         .then(achievements => {
             _wortalCallback(WORTAL_EVENTS.ACHIEVEMENTS_GET_ACHIEVEMENTS_CALLBACK, 1, JSON.stringify(achievements), null);
         })
