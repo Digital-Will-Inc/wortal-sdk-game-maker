@@ -17,3 +17,7 @@ function wortalAds_showRewarded(description) {
         () => _wortalCallback(WORTAL_EVENTS.ADS_AD_VIEWED_CALLBACK),
         () => _wortalCallback(WORTAL_EVENTS.ADS_NO_FILL_CALLBACK))
 }
+
+function wortalAds_showBanner(shouldShow, position) {
+    window.Wortal.ads.showBanner(shouldShow, position);
+}

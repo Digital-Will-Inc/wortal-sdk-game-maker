@@ -12,7 +12,7 @@
     <!-- Set the title bar of the page -->
     <title>GameMaker Game</title>
 
-    <script src="https://storage.googleapis.com/html5gameportal.com/wortal-sdk/wortal-core-1.6.js" data-manual-init="false"></script>
+    <script src="https://storage.googleapis.com/cdn-wortal-ai/v2/wortal-core.js"></script>
 
     <!-- Set the background colour of the document -->
     <style>
@@ -85,12 +85,22 @@
 <script type="text/javascript" src="html5game/wortal-demo.js?TOQZB=1030758890"></script>
 <script>window.onload = GameMaker_Init;</script>
 <script>
-    // Comment this out if using manual initialization
-    setTimeout(() => {
-        if (window.Wortal) {
-            window.Wortal.setLoadingProgress(100);
-        }
-    }, 1000);
+    if (Wortal) {
+        // This should be called as soon as possible as the SDK cannot be used until it's finished initializing.
+        Wortal.initializeAsync().then(() => {
+            // SDK ready to use, you can start the game now. If your game is still loading assets then you can
+            // comment out the startGameAsync call and call it when your game is ready.
+            Wortal.startGameAsync().then(() => {
+                // Game ready to play, player is shown the game.
+            }).catch(err => {
+                console.error(err);
+            });
+        }).catch(err => {
+            console.error(err);
+        });
+    } else {
+        console.error("[Wortal] FATAL::Wortal SDK not found.");
+    }
 </script>
 </body>
 </html>

@@ -1,26 +1,26 @@
 # Wortal SDK for GameMaker
 
 ## Installation
-1. Install the Wortal extension from the [GameMaker Marketplace](https://marketplace.yoyogames.com/assets/11217/wortal)
-2. Navigate to `Included Files` -> `wortal_index.html` and replace the JS file path with your game's.
-   1. Extract the `.zip` archive that results from the GameMaker build.
-   2. Open `index.html` and locate the following line near the bottom:
+- Install the Wortal extension from the [GameMaker Marketplace](https://marketplace.yoyogames.com/assets/11217/wortal)
+- Navigate to `Included Files` -> `wortal_index.html` and replace the JS file path with your game's.
+   - Extract the `.zip` archive that results from the GameMaker build.
+   - Open `index.html` and locate the following line near the bottom:
 
    `<script type="text/javascript" src="html5game/yourgame.js?DBDYB=830673173"></script>`
 
-   3. Copy this line and save it somewhere.
-   4. Open `wortal_index.html` and locate the following line near the bottom:
+   - Copy this line and save it somewhere.
+   - Open `wortal_index.html` and locate the following line near the bottom:
 
    `<!-- CHANGE THIS TO YOUR GAME's PATH -->`
 
-   5. Replace the line below it with the code copied from Step 3.
-3. Navigate to `Game Options` -> `HTML5` -> `Advanced` -> `Included file as index.html` and change this option to `wortal_index.html`.
+   - Replace the line below it with the code copied from Step 3.
+- Navigate to `Game Options` -> `HTML5` -> `Advanced` -> `Included file as index.html` and change this option to `wortal_index.html`.
 
 ## How to Use
 
 ### Ads
 
-[API Reference](https://sdk.html5gameportal.com/api/ads/)
+[API Reference](https://docs.games-api.ai/api/ads/)
 
 Interstitial ads can be shown at various points in the game such as a level end, restart or a timed
 interval in games with longer levels.
@@ -51,7 +51,7 @@ wortal_ads_show_rewarded("ReviveAndContinue");
 
 ### Analytics
 
-[API Reference](https://sdk.html5gameportal.com/api/analytics/)
+[API Reference](https://docs.games-api.ai/api/analytics/)
 
 The Analytics API can be used to track game events that can help better understand how players are interacting with
 the game. This data will be available for viewing in the Wortal dashboard.
@@ -69,9 +69,23 @@ wortal_analytics_log_level_end("Level 3", "100", 1);
 wortal_analytics_log_game_choice("Character", "Blue");
 ```
 
+### Achievements
+
+[API Reference](https://docs.games-api.ai/api/achievements/)
+
+The Achievements API is used to track the player's progress in the game. Achievements can be unlocked by completing specific tasks or reaching certain milestones.
+
+```javascript
+// Unlock an achievement
+wortal_achievements_unlock_async("achievementID");
+
+// Get a user's achievement progress
+wortal_achievements_get_async();
+```
+
 ### Context
 
-[API Reference](https://sdk.html5gameportal.com/api/context/)
+[API Reference](https://docs.games-api.ai/api/context/)
 
 The Context API is used to connect players and allow them to interact in the game session, share their content
 and send messages to each other.
@@ -100,7 +114,7 @@ wortal_context_share_async(json_stringify(payload));
 
 ### In-App Purchases
 
-[API Reference](https://sdk.html5gameportal.com/api/iap/)
+[API Reference](https://docs.games-api.ai/api/iap/)
 
 The In-App Purchases (IAP) API is used to provide an interface for in-game transactions on the platforms.
 This process will differ based on what platform the game is being played on, but the API remains the same.
@@ -119,7 +133,7 @@ wortal_iap_make_purchase_async(json_stringify(purchaseConfig));
 
 ### Leaderboards
 
-[API Reference](https://sdk.html5gameportal.com/api/leaderboard/)
+[API Reference](https://docs.games-api.ai/api/leaderboard/)
 
 The Leaderboard API gives the game access to the platform's leaderboard functionality. This is where
 you can track player's scores and compare them to other players.
@@ -134,7 +148,7 @@ wortal_leaderboard_send_entry_async("global", 100, "details");
 
 ### Notifications
 
-[API Reference](https://sdk.html5gameportal.com/api/notifications/)
+[API Reference](https://docs.games-api.ai/api/notifications/)
 
 The Notifications API is used to send notifications to the player. These can be used to notify the player
 of an event in the game or to remind them to come back and play.
@@ -157,7 +171,7 @@ wortal_notifications_cancel_async("notification-id-123");
 
 ### Player
 
-[API Reference](https://sdk.html5gameportal.com/api/player/)
+[API Reference](https://docs.games-api.ai/api/player/)
 
 You can find details about the current player via the Player API.
 
@@ -177,7 +191,7 @@ wortal_player_get_connected_players_async(json_stringify(payload));
 
 ### Session
 
-[API Reference](https://sdk.html5gameportal.com/api/session/)
+[API Reference](https://docs.games-api.ai/api/session/)
 
 Details about the current session can be accessed in the Session API.
 
@@ -186,9 +200,23 @@ Details about the current session can be accessed in the Session API.
 wortal_session_get_entry_point_async();
 ```
 
+### Stats
+
+[API Reference](https://docs.games-api.ai/api/stats/)
+
+The Stats API is used to track player statistics in the game.
+
+```javascript
+// Post a player's stats.
+wortal_stats_post_async("level 1", 100);
+
+// Get a player's stats for a level.
+wortal_stats_get_async("level 1");
+```
+
 ### Tournament
 
-[API Reference](https://sdk.html5gameportal.com/api/tournament/)
+[API Reference](https://docs.games-api.ai/api/tournament/)
 
 The Tournament API is used to create and manage tournaments for your game.
 
