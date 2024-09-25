@@ -1,15 +1,18 @@
-function wortalAds_isAdBlocked() {
+function wortalAds_isAdBlocked()
+{
     return window.Wortal.ads.isAdBlocked() ? 1 : 0;
 }
 
-function wortalAds_showInterstitial(placement, description) {
+function wortalAds_showInterstitial(placement, description)
+{
     window.Wortal.ads.showInterstitial(placement, description,
         () => _wortalCallback(WORTAL_EVENTS.ADS_BEFORE_AD_CALLBACK),
         () => _wortalCallback(WORTAL_EVENTS.ADS_AFTER_AD_CALLBACK),
         () => _wortalCallback(WORTAL_EVENTS.ADS_NO_FILL_CALLBACK))
 }
 
-function wortalAds_showRewarded(description) {
+function wortalAds_showRewarded(description)
+{
     window.Wortal.ads.showRewarded(description,
         () => _wortalCallback(WORTAL_EVENTS.ADS_BEFORE_AD_CALLBACK),
         () => _wortalCallback(WORTAL_EVENTS.ADS_AFTER_AD_CALLBACK),
@@ -18,6 +21,12 @@ function wortalAds_showRewarded(description) {
         () => _wortalCallback(WORTAL_EVENTS.ADS_NO_FILL_CALLBACK))
 }
 
-function wortalAds_showBanner(shouldShow, position) {
+function wortalAds_showBanner(shouldShow, position)
+{
     window.Wortal.ads.showBanner(shouldShow, position);
+}
+
+function wortalAds_isEnabled()
+{
+    window.Wortal.ads.isEnabled() ? 1 : 0;
 }
