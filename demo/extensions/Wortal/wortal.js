@@ -43,6 +43,7 @@ const WORTAL_EVENTS = {
     PLAYER_SUBSCRIBE_BOT_CALLBACK: "PLAYER_SUBSCRIBE_BOT_CALLBACK",
     SESSION_GET_ENTRY_POINT_CALLBACK: "SESSION_GET_ENTRY_POINT_CALLBACK",
     SESSION_ON_ORIENTATION_CHANGE_CALLBACK: "SESSION_ON_ORIENTATION_CHANGE_CALLBACK",
+    SESSION_ON_AUDIO_STATUS_CHANGE_CALLBACK: "SESSION_ON_AUDIO_STATUS_CHANGE_CALLBACK",
     SESSION_SWITCH_GAME_CALLBACK: "SESSION_SWITCH_GAME_CALLBACK",
     STATS_GET_STATS_CALLBACK: "STATS_GET_STATS_CALLBACK",
     STATS_POST_STATS_CALLBACK: "STATS_POST_STATS_CALLBACK",
@@ -54,7 +55,8 @@ const WORTAL_EVENTS = {
     TOURNAMENT_JOIN_CALLBACK: "TOURNAMENT_JOIN_CALLBACK",
 };
 
-function _wortalCallback(event, success, payload, error) {
+function _wortalCallback(event, success, payload, error)
+{
     var map = {};
     map["id"] = "wortal_callback";
     map["event"] = event;
@@ -64,48 +66,61 @@ function _wortalCallback(event, success, payload, error) {
     GMS_API.send_async_event_social(map);
 }
 
-if (window.Wortal) {
+if (window.Wortal)
+{
     window.Wortal.onPause(() => _wortalCallback(WORTAL_EVENTS.ON_PAUSE_CALLBACK));
 }
 
-function wortal_isInitialized() {
+function wortal_isInitialized()
+{
     return window.Wortal.isInitialized() ? 1 : 0;
 }
 
-function wortal_initializeAsync() {
+function wortal_initializeAsync()
+{
     window.Wortal.initializeAsync()
-        .then(() => {
+        .then(() =>
+        {
             _wortalCallback(WORTAL_EVENTS.INITIALIZE_CALLBACK, 1, null, null);
         })
-        .catch(error => {
+        .catch(error =>
+        {
             _wortalCallback(WORTAL_EVENTS.INITIALIZE_CALLBACK, 0, null, JSON.stringify(error));
         });
 }
 
-function wortal_startGameAsync() {
+function wortal_startGameAsync()
+{
     window.Wortal.startGameAsync()
-        .then(() => {
+        .then(() =>
+        {
             _wortalCallback(WORTAL_EVENTS.START_GAME_CALLBACK, 1, null, null);
         })
-        .catch(error => {
+        .catch(error =>
+        {
             _wortalCallback(WORTAL_EVENTS.START_GAME_CALLBACK, 0, null, JSON.stringify(error));
         });
 }
 
-function wortal_setLoadingProgress(value) {
+function wortal_setLoadingProgress(value)
+{
     window.Wortal.setLoadingProgress(value);
 }
 
-function wortal_performHapticFeedbackAsync() {
+function wortal_performHapticFeedbackAsync()
+{
     window.Wortal.performHapticFeedbackAsync()
-        .then(() => {
+        .then(() =>
+        {
             _wortalCallback(WORTAL_EVENTS.PERFORM_HAPTIC_FEEDBACK_CALLBACK, 1, null, null);
         })
-        .catch(error => {
+        .catch(error =>
+        {
             _wortalCallback(WORTAL_EVENTS.PERFORM_HAPTIC_FEEDBACK_CALLBACK, 0, null, JSON.stringify(error));
         });
 }
 
-function wortal_getSupportedAPIs() {
+function wortal_getSupportedAPIs()
+{
     return JSON.stringify(window.Wortal.getSupportedAPIs());
 }

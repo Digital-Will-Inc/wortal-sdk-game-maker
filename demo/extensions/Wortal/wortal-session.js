@@ -1,53 +1,96 @@
-function wortalSession_getEntryPointData() {
+function wortalSession_getEntryPointData()
+{
     return JSON.stringify(window.Wortal.session.getEntryPointData());
 }
 
-function wortalSession_getEntryPointAsync() {
+function wortalSession_gameplayStart()
+{
+    window.Wortal.session.gameplayStart();
+}
+
+function wortalSession_gameplayStop()
+{
+    window.Wortal.session.gameplayStop();
+}
+
+function wortalSession_happyTime()
+{
+    window.Wortal.session.happyTime();
+}
+
+function wortalSession_getEntryPointAsync()
+{
     window.Wortal.session.getEntryPointAsync()
-        .then(entryPoint => {
+        .then(entryPoint =>
+        {
             _wortalCallback(WORTAL_EVENTS.SESSION_GET_ENTRY_POINT_CALLBACK, 1, entryPoint, null);
         })
-        .catch(error => {
+        .catch(error =>
+        {
             _wortalCallback(WORTAL_EVENTS.SESSION_GET_ENTRY_POINT_CALLBACK, 0, null, JSON.stringify(error));
         });
 }
 
-function wortalSession_setSessionData(data) {
+function wortalSession_setSessionData(data)
+{
     window.Wortal.session.setSessionData(JSON.parse(data));
 }
 
-function wortalSession_getLocale() {
+function wortalSession_getLocale()
+{
     return window.Wortal.session.getLocale();
 }
 
-function wortalSession_getTrafficSource() {
+function wortalSession_getTrafficSource()
+{
     return JSON.stringify(window.Wortal.session.getTrafficSource);
 }
 
-function wortalSession_getPlatform() {
+function wortalSession_getPlatform()
+{
     return window.Wortal.session.getPlatform();
 }
 
-function wortalSession_getDevice() {
+function wortalSession_getDevice()
+{
     return window.Wortal.session.getDevice();
 }
 
-function wortalSession_getOrientation() {
+function wortalSession_getOrientation()
+{
     return window.Wortal.session.getOrientation();
 }
 
-function wortalSession_onOrientationChange() {
-    window.Wortal.session.onOrientationChange(orientation => {
+function wortalSession_onOrientationChange()
+{
+    window.Wortal.session.onOrientationChange(orientation =>
+    {
         _wortalCallback(WORTAL_EVENTS.SESSION_ON_ORIENTATION_CHANGE_CALLBACK, 1, orientation, null);
     });
 }
 
-function wortalSession_switchGameAsync(gameID) {
+function wortalSession_switchGameAsync(gameID)
+{
     window.Wortal.session.switchGameAsync(gameID)
-        .then(() => {
+        .then(() =>
+        {
             _wortalCallback(WORTAL_EVENTS.SESSION_SWITCH_GAME_CALLBACK, 1, null, null);
         })
-        .catch(error => {
+        .catch(error =>
+        {
             _wortalCallback(WORTAL_EVENTS.SESSION_SWITCH_GAME_CALLBACK, 0, null, JSON.stringify(error));
         });
+}
+
+function wortalSession_isAudioEnabled()
+{
+    return window.Wortal.session.isAudioEnabled();
+}
+
+function wortalSession_onAudioStatusChange()
+{
+    window.Wortal.session.onAudioChange(isAudioEnabled =>
+    {
+        _wortalCallback(WORTAL_EVENTS.SESSION_ON_AUDIO_STATUS_CHANGE_CALLBACK, 1, isAudioEnabled, null);
+    })
 }
